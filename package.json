@@ -18,6 +18,8 @@
         "tailwindcss": "^2.2.16"
     },
     "dependencies": {
-        "laravel-mix-icomoon": "^0.1.0"
+        "laravel-mix-icomoon": "^0.1.0",
+        "prod": "^1.0.1",
+        "watch": "^1.0.2"
     }
 }

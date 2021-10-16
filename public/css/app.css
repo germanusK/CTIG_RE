@@ -37,6 +37,15 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+/* 
+hide irrelevant scrollbars with the page
+ */
+ .no-scrollbar::-webkit-scrollbar{
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /*
 Sections
 ========

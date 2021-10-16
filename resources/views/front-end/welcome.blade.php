@@ -18,70 +18,70 @@
         <div class="propertySample sm:grid grid-cols-3 md:grid-cols-5 gap-2 my-8 py-6 px-2 justify-center">
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
             </div>
             <div class="my-4 p-1 h-72 ">
                 <img src=" {{ url('img\skuffwdd60.jpg') }} " alt="" class="h-4/6 w-full rounded my-1">
-                <div class="caption h-2/6 w-full bg-gray-700 my-1 overflow-y-hidden text-sm text-justify text-white">
+                <div class="caption h-2/6 w-full my-1 overflow-y-hidden text-sm text-justify text-gray-800">
                     <div class="py-1 text-center px-4 font-semibold capitalize">Property Name</div>
                     <div class="px-2 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius est architecto numquam asperiores, repellat repudiandae a ut sunt, maiores non voluptatem distinctio cumque modi inventore quod? Nisi, quibusdam asperiores.</div>
                 </div>
