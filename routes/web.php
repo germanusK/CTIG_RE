@@ -4,17 +4,30 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PropertyController;
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\PropertyDetailsController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MainDashboardController;
-use App\Http\Controllers\HomeDashboardController;
-use App\Http\Controllers\PropertyDashboardController;
-use App\Http\Controllers\SiteDashboardController;
-use App\Http\Controllers\CategoryDashboardController;
-use App\Http\Controllers\CustomerDashboardController;
-use App\Http\Controllers\ProfileDashboardController;
+
+// use App\Http\Controllers\Controller;
+// use App\Http\Controllers\MainDashboardController;
+// use App\Http\Controllers\HomeDashboardController;
+// use App\Http\Controllers\PropertyDashboardController;
+// use App\Http\Controllers\SiteDashboardController;
+// use App\Http\Controllers\CategoryDashboardController;
+// use App\Http\Controllers\CustomerDashboardController;
+// use App\Http\Controllers\ProfileDashboardController;
+// use App\Http\Controllers\ContactsControllerController;
+// use App\Http\Controllers\AboutControllerController;
+// use App\Http\Controllers\SiteController;
+
+use App\Http\Controllers\AssetsControllerController;
+use App\Http\Controllers\SitesControllerController;
+use App\Http\Controllers\CategoriesControllerController;
+use App\Http\Controllers\CustomersControllerController;
+use App\Http\Controllers\ProfilesControllerController;
+use App\Http\Controllers\DashboardController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,10 +52,10 @@ Route::get('/login', [LoginController::class, 'show']);
 Route::group(['prefix'=>'dashboard'], function()
 {
     # code...
-    Route::get('/', [MainDashboardController::class, 'show']);
-    Route::get('/property', [PropertyDashboardController::class, 'show']);
-    Route::get('/site', [SiteDashboardController::class, 'show']);
-    Route::get('/category', [CategoryDashboardController::class, 'show']);
-    Route::get('/customer', [CustomerDashboardController::class, 'show']);
-    Route::get('/profile', [ProfileDashboardController::class, 'show']);
+    Route::get('/', [DashboardController::class, 'index']);
+    Route::get('/property', [AssetsControllerController::class, 'index']);
+    Route::get('/site', [SitesControllerController::class, 'index']);
+    Route::get('/category', [CategoriesControllerController::class, 'index']);
+    Route::get('/customer', [CustomersControllerController::class, 'index']);
+    Route::get('/profile', [ProfilesControllerController::class, 'index']);
 });

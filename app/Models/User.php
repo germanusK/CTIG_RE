@@ -17,11 +17,24 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name', 'username', 'email', 'password', 'role_id'];
+    
+    public function role()
+    {
+        return $this->belongsTo(Roles::class);
+    }
+    public function testimonies()
+    {
+        return $this->hasMany(TestimoniesController::class);
+    }
+    public function profile()
+    {
+        return $this->hasOne(ProfilesController::class);
+    }
+    public function transactions()
+    {
+        return $this->hasMany(Transactions::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

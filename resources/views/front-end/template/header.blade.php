@@ -11,7 +11,7 @@
 				<span class="col-span-2 text-4xl text-blue-900 font-serif font-bold text-center">CT REALITY</span>
             </div>
             <div class="justify-end text-right">
-                <a href="https://www.mylfcglobal.com" class="font-serif font-semibold text-blue-700 hover:underline mx-4 my-2 items-baseline">signup</a>
+                <a href="https://mylfcglobal.com/register" class="font-serif font-semibold text-blue-700 hover:underline mx-4 my-2 items-baseline">signup</a>
                 <a href=" {{ url('login') }} " class="font-serif font-semibold text-blue-700 hover:underline mx-4 my-2 items-baseline">login</a>
             </div>
         </div>
