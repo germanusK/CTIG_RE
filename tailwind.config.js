@@ -1,8 +1,11 @@
 module.exports = {
   purge: [
-    './resources/**/*.blade.php',
-    './resources/**/**/*.blade.php',
-    './resources/**/**/**/*.blade.php',
+    './resources/views/*.blade.php',
+    './resources/views/front-end/*.blade.php',
+    './resources/views/dashboard/**/*.blade.php',
+    './resources/views/front-end/**/*.blade.php',
+    './resources/views/dashboard/*.blade.php',
+    './resources/views/**',
     './resources/**/*.js',
     './resources/**/*.vue',
   ],
