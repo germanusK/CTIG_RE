@@ -116,11 +116,11 @@
                     We are undoubtable to retain our trust and yours is therefore a certainty. Nothing to border.  We're handling it at your interest
                 </div>
             </div>
-            <div class="py-4"><video src="{{ url('https://www.youtube.com/watch?v=VAzlswsQEas') }}" controls class="w-10/12 mx-auto h-80 bg-white rounded"></video></div>
+            <div class="py-4"><iframe src="{{ url('https://www.youtube.com/watch?v=VAzlswsQEas') }}" controls class="w-10/12 mx-auto h-80 bg-white rounded"></iframe></div>
             <div class="col-span-2 py-8 w-full">
                 <div class="text-center text-3xl font-bold leading-loose tracking-tight capitalize text-white">Latest Deals</div>
                 <div class="sm:w-2/3 py-12 px-6 mx-auto">
-                    <img src="{{ url('img/bg1.jpg') }}" alt="" id="prop_image" class="w-full  rounded-sm opacity-80 transition-all animate-bounce">
+                    <img src="{{ url('img/bg1.jpg') }}" alt="" id="prop_image" class="w-full  rounded-sm opacity-80 transition-all animate-pulse">
                     <script>
                         let prop_image = document.getElementById("prop_image");
                         let image_array = [
