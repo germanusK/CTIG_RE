@@ -20,6 +20,11 @@
                 /* border-top: 3rem solid transparent; */
                 z-index: -1;
             }
+            .onSite{
+                /* border-right: 15rem solid transparent; */
+                border-top-right-radius: -35%;
+                border-bottom-right-radius: 190%;
+            }
         </style>
     </head>
     <body class="antialiased bg-fixed">
@@ -106,8 +111,13 @@
         <!-- images taken on site -->
         @endsection
         <div class="onSite sm:grid grid-cols-2 gap-2 justify-center py-12 bg-black">
-            <div class=""></div>
-            <div class="col-span-2 py-8">
+            <div class="flex align-middle justify-center">
+                <div class="text-center text-white text-xl tracking-wide font-semibold sm:w-2/3 mx-auto" >
+                    We are undoubtable to retain our trust and yours is therefore a certainty. Nothing to border.  We're handling it at your interest
+                </div>
+            </div>
+            <div class="py-4"><video src="{{ url('https://www.youtube.com/watch?v=VAzlswsQEas') }}" class="w-10/12 mx-auto h-80 bg-white rounded"></video></div>
+            <div class="col-span-2 py-8 w-full">
                 <div class="text-center text-3xl font-bold leading-loose tracking-tight capitalize text-white">Latest Deals</div>
                 <div class="sm:w-2/3 py-12 px-6 mx-auto">
                     <img src="{{ url('img/bg1.jpg') }}" alt="" id="prop_image" class="w-full  rounded-sm opacity-80 transition-all animate-bounce">
