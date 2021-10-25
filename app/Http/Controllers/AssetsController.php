@@ -27,6 +27,7 @@ class AssetsController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**
@@ -85,4 +86,61 @@ class AssetsController extends Controller
     {
         //
     }
+
+      // read many 
+      public function readMany(Request $request)
+      {
+          # code...
+          return Assets::all();
+        //   return AssetsResource::collection(Assets::all());
+      }
+  
+      public function readOne(Request $request)
+      {
+          # code...
+          return new AssetsResource($request);
+      }
+  
+      public function writeMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function writeOne(Request $request)
+      {
+          # code...
+          $asset = new Assets();
+        //   assign fields
+
+        $asset->name = $request->name;
+        $asset->block_number = $request->block_number;
+        $asset->status = $request->status;
+        $asset->description = $request->description;
+        $asset->category_id = $request->category_id;
+        $asset->site_id = $request->site_id;
+        $asset->location_id = $request->location_id;
+
+        // save data.
+        return $asset->save() ? ($asset) : null;
+      }
+  
+      public function putMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function putOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteOne(Request $request)
+      {
+          # code...
+      }
 }

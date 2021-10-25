@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Testimony;
 use App\Models\Testimonies;
 use Illuminate\Http\Request;
 
@@ -83,4 +84,50 @@ class TestimoniesController extends Controller
     {
         //
     }
+
+
+
+
+      // read many 
+      public function readMany(Request $request)
+      {
+          # code...
+          return Testimony::collection(Testimonies::all());
+      }
+  
+      public function readOne(Request $request)
+      {
+          # code...
+          return new Testimony($request);
+      }
+  
+      public function writeMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function writeOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function putMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function putOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteOne(Request $request)
+      {
+          # code...
+      }
 }

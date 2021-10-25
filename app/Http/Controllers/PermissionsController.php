@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Permission;
 use App\Models\permissions;
 use Illuminate\Http\Request;
 
@@ -82,4 +83,49 @@ class PermissionsController extends Controller
     {
         //
     }
+
+
+
+      // read many 
+      public function readMany(Request $request)
+      {
+          # code...
+          return Permission::collection(permissions::all());
+      }
+  
+      public function readOne(Request $request)
+      {
+          # code...
+          return new Permission($request);
+      }
+  
+      public function writeMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function writeOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function putMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function putOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteOne(Request $request)
+      {
+          # code...
+      }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Appointment;
 use App\Models\Appointments;
 use Illuminate\Http\Request;
 
@@ -83,6 +84,47 @@ class AppointmentsController extends Controller
         //
     }
 
-    
+      // read many 
+      public function readMany(Request $request)
+      {
+          # code...
+          return Appointment::collection(Appointments::all());
+      }
+  
+      public function readOne(Request $request)
+      {
+          # code...
+          return Appointment::collection($request);
+      }
+  
+      public function writeMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function writeOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function putMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function putOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteOne(Request $request)
+      {
+          # code...
+      }
     
 }

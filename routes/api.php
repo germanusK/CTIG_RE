@@ -13,6 +13,7 @@ use App\Http\Controllers\LocationsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\TestimoniesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,12 +35,12 @@ Route::get('/test', function(Request $request){
     return "Authenticated";
 });
 
-Route::group(['prefix'=>'dashboard', 'as'=>'dashboard'], function(){
+Route::group(['prefix'=>'dashboard'], function(){
 
     Route::get('/users', [UsersController::class, 'readMany']);
     Route::get('/users/{id}', [UsersController::class, 'readOne']);
     Route::post('/users', [UsersController::class, 'writeMany']);
-    Route::post('users/{id}', [UsersController::class, 'writeOne']);
+    Route::post('/users/one', [UsersController::class, 'writeOne']);
     Route::put('/users', [UsersController::class, 'putMany']);
     Route::put('/users/{id}', [UsersController::class, 'putOne']);
     Route::delete('/users', [UsersController::class, 'deleteMany']);
@@ -50,7 +51,7 @@ Route::group(['prefix'=>'dashboard', 'as'=>'dashboard'], function(){
     Route::get('/assets', [AssetsController::class, 'readMany']);
     Route::get('/assets/{id}', [AssetsController::class, 'readOne']);
     Route::post('/assets', [AssetsController::class, 'writeMany']);
-    Route::post('/assets/{id}', [AssetsController::class, 'writeOne']);
+    Route::post('/assets/one', [AssetsController::class, 'writeOne']);
     Route::put('/assets', [AssetsController::class, 'putMany']);
     Route::put('/assets/{id}', [AssetsController::class, 'putOne']);
     Route::delete('/assets', [AssetsController::class, 'deleteMany']);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\About as ResourcesAbout;
 use App\Models\About;
 use Illuminate\Http\Request;
 
@@ -84,16 +85,17 @@ class AboutController extends Controller
         //
     }
 
-
-    // read many 
+  // read many 
     public function readMany(Request $request)
     {
         # code...
+        return ResourcesAbout::collection(About::all());
     }
 
     public function readOne(Request $request)
     {
         # code...
+        return new ResourcesAbout($request);
     }
 
     public function writeMany(Request $request)
@@ -104,6 +106,7 @@ class AboutController extends Controller
     public function writeOne(Request $request)
     {
         # code...
+    return About::create(/* data */);
     }
 
     public function putMany(Request $request)
@@ -125,4 +128,5 @@ class AboutController extends Controller
     {
         # code...
     }
+  
 }

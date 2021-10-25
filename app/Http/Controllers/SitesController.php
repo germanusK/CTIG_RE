@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Site;
 use App\Models\Sites;
 use Illuminate\Http\Request;
 
@@ -83,4 +84,50 @@ class SitesController extends Controller
     {
         //
     }
+
+
+
+
+      // read many 
+      public function readMany(Request $request)
+      {
+          # code...
+          return Sites::all();
+      }
+  
+      public function readOne(Request $request)
+      {
+          # code...
+          return new Site($request);
+      }
+  
+      public function writeMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function writeOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function putMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function putOne(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteMany(Request $request)
+      {
+          # code...
+      }
+  
+      public function deleteOne(Request $request)
+      {
+          # code...
+      }
 }
