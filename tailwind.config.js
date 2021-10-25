@@ -6,7 +6,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'bg1': "url('/img/bg1.jpg')",
+        'bg2': "url('/img/bg2.jpg')",
+       }
+    },
   },
   variants: {
     extend: {},

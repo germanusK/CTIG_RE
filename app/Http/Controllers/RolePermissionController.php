@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Role_permission;
+use App\Models\RolePermission;
 use Illuminate\Http\Request;
 
 class RolePermissionController extends Controller
@@ -41,10 +41,10 @@ class RolePermissionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Role_permission  $role_permission
+     * @param  \App\Models\RolePermission  $rolePermission
      * @return \Illuminate\Http\Response
      */
-    public function show(Role_permission $role_permission)
+    public function show(RolePermission $rolePermission)
     {
         //
     }
@@ -52,10 +52,10 @@ class RolePermissionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Role_permission  $role_permission
+     * @param  \App\Models\RolePermission  $rolePermission
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role_permission $role_permission)
+    public function edit(RolePermission $rolePermission)
     {
         //
     }
@@ -64,10 +64,10 @@ class RolePermissionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Role_permission  $role_permission
+     * @param  \App\Models\RolePermission  $rolePermission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role_permission $role_permission)
+    public function update(Request $request, RolePermission $rolePermission)
     {
         //
     }
@@ -75,10 +75,10 @@ class RolePermissionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Role_permission  $role_permission
+     * @param  \App\Models\RolePermission  $rolePermission
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role_permission $role_permission)
+    public function destroy(RolePermission $rolePermission)
     {
         //
     }

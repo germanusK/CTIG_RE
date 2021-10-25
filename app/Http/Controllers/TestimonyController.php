@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
+use App\Models\Testimonies;
 use Illuminate\Http\Request;
 
-class AboutControllerController extends Controller
+class TestimonyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class AboutControllerController extends Controller
     public function index()
     {
         //
-        return view('front-end.about');
+        return view('front-end.testimony');
     }
 
     /**
@@ -42,21 +42,21 @@ class AboutControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\AboutController  $aboutController
+     * @param  \App\Models\Testimonies  $testimonies
      * @return \Illuminate\Http\Response
      */
-    public function show(AboutController $aboutController)
+    public function show(Testimonies $testimonies)
     {
-        //
+        return view('front-end.testimony');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\AboutController  $aboutController
+     * @param  \App\Models\Testimonies  $testimonies
      * @return \Illuminate\Http\Response
      */
-    public function edit(AboutController $aboutController)
+    public function edit(Testimonies $testimonies)
     {
         //
     }
@@ -65,10 +65,10 @@ class AboutControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\AboutController  $aboutController
+     * @param  \App\Models\Testimonies  $testimonies
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AboutController $aboutController)
+    public function update(Request $request, Testimonies $testimonies)
     {
         //
     }
@@ -76,10 +76,10 @@ class AboutControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\AboutController  $aboutController
+     * @param  \App\Models\Testimonies  $testimonies
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AboutController $aboutController)
+    public function destroy(Testimonies $testimonies)
     {
         //
     }
