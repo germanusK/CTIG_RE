@@ -2,62 +2,81 @@
 <html lang="en">
     <head>
     @include('front-end/template/top')
+    <style>
+        body{
+            background-image: url("{{ url('img/team.jpg') }}");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .dark_bg{
+            z-index: -1;
+        }
+        /* This container is needed to position the front and back side */
+        .flip-box-inner {
+            position: relative;
+            /* width: 100%;
+            height: 100%;
+            text-align: center; */
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-box-front, .flip-box-back {
+            /* position: absolute;
+            width: 100%;
+            height: 100%; */
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+        }
+        .flip-box:hover .flip-box-inner{
+            transform: rotateY(180deg);
+        }
+        .flip-box-back {
+            /* background-color: dodgerblue; */
+            transform: rotateY(180deg);
+        }
+    </style>
     </head>
     <body>
+        <div class="dark_bg absolute h-max w-full bg-gray-700 bg-opacity-80">
         @include('front-end/template/header')
 
-        @section('aboutBody')
-        @endsection
-        
-        <div class="w-screen md:w-9/12 mx-auto my-8 py-6 overflow-x-scroll space-x-4 whitespace-nowrap no-scrollbar">
-            <div class="flex w-min overflow-hidden whitespace-nowrap">
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                    <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg">Name and position</div>
+        <div class="w-full py-24 text-white text-center text-4xl font-semibold leading-relaxed tracking-wide capitalize">about us</div>
+
+        <div class="w-full h-screen py-8">
+            <div class="flip-box w-11/12 sm:w-9/12 h-5/6 mx-auto">
+                <div class="flip-box-inner text-center w-full h-full relative">
+                    <div class="flip-box-front w-full h-full absolute">
+                        <img src="{{ url('img/staff.jpg') }}" alt="TEAM" class="w-full h-full rounded-xl">
                     </div>
-                </div>
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                    <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg"> Name and position</div>
-                    </div>
-                </div>
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                    <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full  z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg">Name and position</div>
-                    </div>
-                </div>
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                    <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full  z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg">Name and position</div>
-                    </div>
-                </div>
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                    <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full  z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg">Name and position</div>            
-                    </div>
-                </div>
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                    <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full  z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg">Name and position</div>
-                    </div>
-                </div>
-                <div class="h-8/12 hover:h-11/12 w-72 mx-2 p-2 items-center align-middle rounded-lg overflow-hidden">
-                <div class="w-full h-full">
-                        <img src=" {{ url('img\skuffwdd114.jpg') }} " alt="" class="w-full h-full  z-0 object-contain">
-                        <div class="w-full h-full text-center z-10 bg-transparent text-lg">Name and position</div>
+                    <div class="flip-box-back justify-center w-full h-full absolute flex items-center align-middle bg-white rounded-xl">
+                        <div class="text-center px-4 ">
+                            <div class="text-blue-900 text-3xl font-semibold py-4">Our team</div>
+                            <p class="text-2xl text-gray-700 font-semibold">Our team goes to every extend to make sure you have a great choice of property at all times. Moving the community forward with minimal effort by bringing to you all as much as our hands can stretch to. By our business habits, we move much closer and faster to a modern society from any level.</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <div class="text-justify text-gray-100 px-6 py-4"></div>
         </div>
+        <div class="w-full h-screen py-8 justify-center align-middle items-center flex overflow-x-scroll bg-white">
+            <div class="flex  flex-nowrap w-max">
+                <div class="_flip-box w-72 h-5/6 ">
+                    <div class="_flip-box-inner text-center relative w-full h-full">
+                        <div class="_flib-box-front w-full h-full absolute">
+                            <img src="{{ url('img/staff1.jpg') }}" alt="" class="rounded-xl w-full h-full">
+                        </div>
+                        <div class="_flip-box-back w-full h-full absolute border-2 border-blue-900 rounded-xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
          
         @include('front-end/template/footer')
-        
+        </div>
     </body>
 </html>

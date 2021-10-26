@@ -98,7 +98,7 @@
                     <div class="w-3/5 mx-auto bg-gradient-to-t shadow-inner font-semibold from-gray-300 to-gray-50 text-center px-auto py-4 rounded-full">count+</div>
                     <div class="text-center w-full px-2 py-4 text-3xl font-semibold uppercase">projects</div>
                 </div>
-                <div class="bg-gray-800 text-center justify-center py-8 h-full rounded-xl ">
+                <div class="bg-gray-800 text-center justify-center py-8 h-full rounded ">
                     <div class="w-3/5 mx-auto bg-gradient-to-t shadow-inner font-semibold from-purple-300 to-purple-50 text-center px-auto py-4 rounded-full">count+</div>
                     <div class="text-center w-full px-2 py-4 text-3xl font-semibold uppercase">customers</div>
                 </div>
@@ -112,9 +112,9 @@
                     <img src="{{ url('img/marketing1.jpg') }}" alt="" class="w-full h-full rounded">
                 </div>
                 <div class="flex align-middle items-center h-full w-9/12 mx-auto">
-                    <div class="text-center text-gray-900">
+                    <div class="text-center text-gray-900 tracking-wide leading-relaxed">
                         <div class="text-3xl font-semibold my-3 capitalize">We keep it quite simple</div>
-                        <div class="text-2xl font-semibold">Very easy-going. Always feel free to book for a visit to have a look at property before payments if that will be necessary on your part.</div>
+                        <div class="text-3xl font-semibold">Very easy-going. Always feel free to book for a visit to have a look at property before payments if that will be necessary on your part.</div>
                         <div class="my-4 w-full justify-end text-right"> <a href="{{ url('') }}" class="px-6 py-2 bg-gray-600 text-white text-xl border-2 border-white rounded-full font-semibold">Book a visit</a></div>
                     </div>
                 </div>
@@ -127,13 +127,13 @@
         @endsection
         <div class="sm:grid grid-cols-2 gap-2 justify-center py-12 bg-white">
             <div class="flex align-middle items-center">
-                <div class="text-center text-black text-2xl tracking-wide font-semibold sm:w-2/3 mx-auto" >
+                <div class="text-center text-black text-3xl leading-relaxed tracking-wide font-semibold sm:w-2/3 mx-auto" >
                     We are undoubtable to retain our trust and yours is therefore a certainty. Nothing to border.  We're handling it at your interest
                 </div>
             </div>
-            <div class="py-4"><iframe src="{{ url('https://www.youtube.com/watch?v=VAzlswsQEas') }}" controls class="w-10/12 mx-auto h-80 bg-white rounded"></iframe></div>
+            <div class="py-4"><video src="{{ url('https://www.youtube.com/watch?v=VAzlswsQEas') }}" controls class="w-10/12 mx-auto h-80 bg-white rounded"></video></div>
             <div class="col-span-2 py-12 w-full">
-                <div class="text-center text-3xl font-bold leading-loose tracking-tight capitalize text-black">Latest Deals</div>
+                <div class="text-center text-4xl font-bold leading-loose tracking-tight capitalize text-blue-900">Latest Deals</div>
                 <div class="sm:w-2/3 py-12 px-6 mx-auto">
                     <img src="{{ url('img/bg1.jpg') }}" alt="" id="prop_image" class="w-full  rounded-lg">
                     <script>

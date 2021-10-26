@@ -35,7 +35,7 @@
                 </div>
                 <div class="h-full max-h-screen px-8">
 
-                    <img src=" {{ url('img/bg4.jpg') }} " alt="" class="rounded shadow-2xl opacity-90">
+                    <img src=" {{ url('img/house.svg') }} " alt="" class="rounded shadow-2xl opacity-90">
                 </div>
             </div>
         </div>

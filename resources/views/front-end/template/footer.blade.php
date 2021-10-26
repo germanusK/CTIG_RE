@@ -1,4 +1,4 @@
-<div class="grid xs:grid-cols-1 sm:grid-cols-3 md:grid-cols-5 justify-center sm:items-center sm:justify-between bg-gray-800 px-12">
+<div class="sm:grid grid-cols-3 md:grid-cols-5 justify-center sm:items-center sm:justify-between bg-gray-800">
     <div class="sm:col-span-3 md:col-span-5 py-6 px-auto text-right font-serif font-semibold text-white"> <a href="" class="px-4 py-2 bg-green-100 text-blue-700 rounded-full">chat</a> </div>
     <div class="sm:col-span-3 md:col-span-5 py-6 px-auto text-center text-2xl font-semibold text-white">Real Estate @CT inc Group </div>
     <div class="px-2 py-6 bg-gray-600 border-0 border-l-2 border-gray-400 h-full">
