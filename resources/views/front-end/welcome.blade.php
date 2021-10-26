@@ -4,7 +4,7 @@
         @include('front-end.template.top')
         <style>
             body{
-                background-image: url(" {{ url('img/bg4.jpg') }}");
+                background-image: url(" {{ url('img/bgl2.jpg') }} ");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -24,6 +24,9 @@
                 /* border-right: 15rem solid transparent; */
                 border-top-right-radius: -35%;
                 border-bottom-right-radius: 190%;
+            }
+            #prop_image{
+                border: 2rem outset rgb(255, 250, 245);
             }
         </style>
     </head>
@@ -93,15 +96,27 @@
             <div class="statistics w-6/7 sm:w-4/6 mx-auto py-20 sm:grid grid-cols-3 items-center">
                 <div class="bg-gray-600 text-center justify-center py-8 h-5/6 rounded ">
                     <div class="w-3/5 mx-auto bg-gradient-to-t shadow-inner font-semibold from-gray-300 to-gray-50 text-center px-auto py-4 rounded-full">count+</div>
-                    <div class="text-center w-full px-2 py-4 text-3xl font-semibold font-serif uppercase">projects</div>
+                    <div class="text-center w-full px-2 py-4 text-3xl font-semibold uppercase">projects</div>
                 </div>
                 <div class="bg-gray-800 text-center justify-center py-8 h-full rounded-xl ">
                     <div class="w-3/5 mx-auto bg-gradient-to-t shadow-inner font-semibold from-purple-300 to-purple-50 text-center px-auto py-4 rounded-full">count+</div>
-                    <div class="text-center w-full px-2 py-4 text-3xl font-semibold font-serif uppercase">customers</div>
+                    <div class="text-center w-full px-2 py-4 text-3xl font-semibold uppercase">customers</div>
                 </div>
                 <div class="bg-gray-500 text-center justify-center py-8 h-5/6 rounded ">
                     <div class="w-3/5 mx-auto bg-gradient-to-t shadow-inner font-semibold from-gray-300 to-gray-50 text-center px-auto py-4 rounded-full">count+</div>
-                    <div class="text-center w-full px-2 py-4 text-3xl font-semibold font-serif uppercase">cities</div>
+                    <div class="text-center w-full px-2 py-4 text-3xl font-semibold uppercase">cities</div>
+                </div>
+            </div>
+            <div class="py-14 sm:grid grid-cols-2 gap-2">
+                <div class="w-10/12 rounded mx-auto my-4 h-84">
+                    <img src="{{ url('img/marketing1.jpg') }}" alt="" class="w-full h-full rounded">
+                </div>
+                <div class="flex align-middle items-center h-full w-9/12 mx-auto">
+                    <div class="text-center text-gray-900">
+                        <div class="text-3xl font-semibold my-3 capitalize">We keep it quite simple</div>
+                        <div class="text-2xl font-semibold">Very easy-going. Always feel free to book for a visit to have a look at property before payments if that will be necessary on your part.</div>
+                        <div class="my-4 w-full justify-end text-right"> <a href="{{ url('') }}" class="px-6 py-2 bg-gray-600 text-white text-xl border-2 border-white rounded-full font-semibold">Book a visit</a></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,21 +125,21 @@
         @section('onSite')
         <!-- images taken on site -->
         @endsection
-        <div class="onSite sm:grid grid-cols-2 gap-2 justify-center py-12 bg-black">
-            <div class="flex align-middle justify-center">
-                <div class="text-center text-white text-xl tracking-wide font-semibold sm:w-2/3 mx-auto" >
+        <div class="sm:grid grid-cols-2 gap-2 justify-center py-12 bg-white">
+            <div class="flex align-middle items-center">
+                <div class="text-center text-black text-2xl tracking-wide font-semibold sm:w-2/3 mx-auto" >
                     We are undoubtable to retain our trust and yours is therefore a certainty. Nothing to border.  We're handling it at your interest
                 </div>
             </div>
             <div class="py-4"><iframe src="{{ url('https://www.youtube.com/watch?v=VAzlswsQEas') }}" controls class="w-10/12 mx-auto h-80 bg-white rounded"></iframe></div>
-            <div class="col-span-2 py-8 w-full">
-                <div class="text-center text-3xl font-bold leading-loose tracking-tight capitalize text-white">Latest Deals</div>
+            <div class="col-span-2 py-12 w-full">
+                <div class="text-center text-3xl font-bold leading-loose tracking-tight capitalize text-black">Latest Deals</div>
                 <div class="sm:w-2/3 py-12 px-6 mx-auto">
-                    <img src="{{ url('img/bg1.jpg') }}" alt="" id="prop_image" class="w-full  rounded-sm opacity-80 transition-all animate-pulse">
+                    <img src="{{ url('img/bg1.jpg') }}" alt="" id="prop_image" class="w-full  rounded-lg">
                     <script>
                         let prop_image = document.getElementById("prop_image");
                         let image_array = [
-                            "{{ url('img/bg1.jpg') }}", "{{ url('img/img2.jpg') }}", "{{ url('img/bg2.jpg') }}"
+                            "{{ url('img/GetStoredImage.jpeg') }}", "{{ url('img/marketing1.jpg') }}", "{{ url('img/bg4.jpg') }}", "{{ url('img/img3.jpg') }}"
                         ], count = 0;
                         setInterval(function(){
                             prop_image.style.width += 30;

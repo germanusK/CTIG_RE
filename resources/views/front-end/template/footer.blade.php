@@ -1,6 +1,6 @@
 <div class="grid xs:grid-cols-1 sm:grid-cols-3 md:grid-cols-5 justify-center sm:items-center sm:justify-between bg-gray-800 px-12">
-    <div class="sm:col-span-3 md:col-span-5 py-6 px-auto bg-gradient-to-t from-gray-500 to-gray-100 text-right font-serif font-semibold text-white"> <a href="" class="px-4 py-2 bg-green-100 text-blue-700 rounded-full">chat</a> </div>
-    <div class="sm:col-span-3 md:col-span-5 py-6 px-auto bg-gradient-to-t from-gray-800 via-gray-800 to-gray-500 text-center text-2xl font-serif font-semibold text-white">Real Estate @CT inc Group </div>
+    <div class="sm:col-span-3 md:col-span-5 py-6 px-auto text-right font-serif font-semibold text-white"> <a href="" class="px-4 py-2 bg-green-100 text-blue-700 rounded-full">chat</a> </div>
+    <div class="sm:col-span-3 md:col-span-5 py-6 px-auto text-center text-2xl font-semibold text-white">Real Estate @CT inc Group </div>
     <div class="px-2 py-6 bg-gray-600 border-0 border-l-2 border-gray-400 h-full">
         <div class="text-center text-white text-lg font-semibold">About Us</div>
         <p class="text-justified break-words  text-white">Information about CT Builders Real Estate</p>
