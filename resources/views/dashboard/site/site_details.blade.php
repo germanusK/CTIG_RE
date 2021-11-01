@@ -12,7 +12,7 @@
         </div>
 
         <!-- section for header and content -->
-        <div class="col-span-4 w-full bg-green-100 rounded-r-lg">
+        <div class="col-span-4 w-full bg-gray-100 rounded-r-lg">
             <!-- header display -->
             @include('dashboard.template.header')
             <div class="justify-items-right pr-6 text-right py-4 w-full bg-pink-50">
@@ -22,20 +22,20 @@
             </div>
 
             <!-- display section -->
-            <div class="w-full max-h-screen overflow-y-scroll no-scrollbar p-2">
-                <?php for ($i=0; $i < count($sites); $i++) { ?>
-                    <a href="{{ url('/dashboard/sites/'.$sites[$i]['id'].'/details') }}">
-                    <div class="h-32 md:h-40 w-full my-3 rounded-lg flex flex-nowrap">
-                        <div class="w-1/3 lg:w-1/4 h-full rounded-l-lg bg-blue-900">
-                            <img src="{{ url(Config::get('global_vars.api_dashboard_routes.maps').'/'.$sites[$i]['site_map']) }}" alt="" class="w-full h-full rounded-l-lg">
-                        </div>
-                        <div class="w-2/3 lg:w-3/4 h-full flex align-middle items-center text-center text-xl font-semibold bg-blue-100 rounded-r-lg">
-                            Site Details: size in number of properties, available size in number of aquirable property, consumed size, location, description
-                            
+            <div class="w-full max-h-screen overflow-y-scroll no-scrollbar p-2 bg-gray-100">
+
+                <div class="w-full h-full grid grid-cols-5">
+                    <img src="{{ url($map_path) }}" alt="" class="col-span-5 md:col-span-3 w-full h-full">
+                    <div class="col-span-5 md:col-span-2 flex align-middle items-center justify-center">
+                        <div> site detailed data
+                            <div class="flex w-full justify-center py-3 px-5">
+                                <a href="{{ url('/dashboard/sites/'.'$site->id'.'/edit') }}" class="px-3 py-1 rounded mx-2 bg-blue-200 text-blue-600 font-semibold">edit</a>
+                                <a href="{{ url('/dashboard/sites/'.'$site->id'.'/on_delete') }}" class="px-3 py-1 rounded mx-2 bg-blue-200 text-blue-600 font-semibold">delete</a>
+                            </div>
                         </div>
                     </div>
-                    </a>
-                <?php } ?>
+                </div>
+
             </div>
         </div>
     </div>

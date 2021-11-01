@@ -9,27 +9,13 @@ use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\PropertyDetailsController;
 use App\Http\Controllers\LoginController;
 
-// use App\Http\Controllers\Controller;
-// use App\Http\Controllers\MainDashboardController;
-// use App\Http\Controllers\HomeDashboardController;
-// use App\Http\Controllers\PropertyDashboardController;
-// use App\Http\Controllers\SiteDashboardController;
-// use App\Http\Controllers\CategoryDashboardController;
-// use App\Http\Controllers\CustomerDashboardController;
-// use App\Http\Controllers\ProfileDashboardController;
-// use App\Http\Controllers\ContactsController;
-// use App\Http\Controllers\AboutController;
-// use App\Http\Controllers\SiteController;
-
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\CreateAsset;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\EditAsset;
-use App\Models\Assets;
+use App\Http\Controllers\SiteDetails;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,26 +46,30 @@ Route::group(['prefix'=>'/dashboard'], function()
             Route::get('/', [AssetsController::class, 'index']);
             Route::post('/present_form', [AssetsController::class, 'store']);
             Route::get('/create', [AssetsController::class, 'create']);
-            Route::get('/edit', [AssetsController::class, 'edit']);
-            Route::get('/details', [AssetDetails::class, 'details']);
+            Route::get('/{id}/edit', [AssetsController::class, 'edit']);
+            Route::get('/{id}/details', [AssetDetails::class, 'details']);
     });
     Route::group(['prefix'=>'/sites'], function(){
-            Route::get('/', [SiteController::class, 'index']);
+            
+            Route::post('/create/process', [SiteController::class, 'store']);
             Route::get('/create', [SiteController::class, 'create']);
-            Route::get('/edit', [SiteController::class, 'edit']);
-            Route::get('details', [SiteController::class, 'details']);
+            Route::get('/{id}/edit', [SiteController::class, 'edit']);
+            Route::get('/{id}/details', [SiteController::class, 'details']);
+            Route::get('/{id}/on_delete', [SiteDetails::class, 'on_delete']);
+            Route::get('/', [SiteController::class, 'index']);
     });
     Route::group(['prefix'=>'/categories'], function(){
             Route::get('/', [CategoriesController::class, 'index']);
             Route::get('/create', [CategoriesController::class, 'create']);
-            Route::get('/edit', [CategoriesController::class, 'edit']);
+            Route::get('/{id}/edit', [CategoriesController::class, 'edit']);
+            Route::get('/{id}/details', [CategoriesController::class, 'details']);
     });
     Route::group(['prefix'=>'/customers'], function(){
             Route::get('/', [CustomersController::class, 'index']);
-            Route::get('/details', [CustomersController::class, 'details']);
+            Route::get('/{id}/details', [CustomersController::class, 'details']);
     });
     Route::group(['prefix'=>'/profile'], function(){
             Route::get('/', [ProfilesController::class, 'index']);
-            Route::get('/edit', [ProfilesController::class, 'edit']);
+            Route::get('/{id}/edit', [ProfilesController::class, 'edit']);
     });
 });

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sites;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Route;
 
 class SiteController extends Controller
 {
@@ -15,7 +19,7 @@ class SiteController extends Controller
     public function index()
     {
         //
-        return view('dashboard.site.dashboard_site');
+        return view('dashboard.site.dashboard_site', ['sites'=>Http::get(Config::get('global_vars.api_dashboard_routes.sites'))->json()]);
     }
 
     /**
@@ -26,6 +30,7 @@ class SiteController extends Controller
     public function create()
     {
         //
+        return view('dashboard.site.create');
     }
 
     /**
@@ -37,8 +42,32 @@ class SiteController extends Controller
     public function store(Request $request)
     {
         //
-    }
+        // $site = ['site_name'=>$request->site_name, 'site_number'=>$request->site_number, 'site_map'=>$request->file('site_map')];
+        // return redirect()->route(Config::get('global_vars.api_dashboard_routes.create_site'));
 
+        
+        $client = new Client();
+        $response = $client->request('POST', Config::get('global_vars.api_dashboard_routes.create_site'), [
+            'multipart'=>[
+                [
+                    'name'=>'site_name',
+                    'contents'=>$request->site_name
+                ],
+                [
+                    'name'=>'site_number',
+                    'contents'=>$request->site_number
+                ],
+                [
+                    'Content-type'=>'multipart/form-data',
+                    'name'=>'site_map',
+                    'contents'=>fopen($request->file('site_map'), 'r'),
+                    'filename'=>time().(string)(rand(10000000000, 99999999999)).'.'.$request->file('site_map')->getClientOriginalExtension()
+                ]
+            ]
+        ]);
+        return $response;
+
+    }
     /**
      * Display the specified resource.
      *
@@ -59,6 +88,7 @@ class SiteController extends Controller
     public function edit(Sites $site)
     {
         //
+        return view('dashboard.site.edit', ['site'=>$site]);
     }
 
     /**
@@ -82,5 +112,15 @@ class SiteController extends Controller
     public function destroy(Sites $site)
     {
         //
+    }
+
+    public function details(Request $request, $id)
+    {
+        # code...
+
+        $site = Http::get(Config::get('global_vars.api_dashboard_routes.sites').'/'.$id);
+        $map_path = Config::get('global_vars.api_dashboard_routes.maps').'/'.$site['site_map'];
+        return view('dashboard.site.site_details', ['site'=>$site, 'map_path'=>$map_path]);
+        
     }
 }

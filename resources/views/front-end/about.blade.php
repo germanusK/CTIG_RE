@@ -15,18 +15,11 @@
         }
         /* This container is needed to position the front and back side */
         .flip-box-inner {
-            position: relative;
-            /* width: 100%;
-            height: 100%;
-            text-align: center; */
             transition: transform 0.8s;
             transform-style: preserve-3d;
         }
 
         .flip-box-front, .flip-box-back {
-            /* position: absolute;
-            width: 100%;
-            height: 100%; */
             -webkit-backface-visibility: hidden; /* Safari */
             backface-visibility: hidden;
         }
@@ -34,7 +27,6 @@
             transform: rotateY(180deg);
         }
         .flip-box-back {
-            /* background-color: dodgerblue; */
             transform: rotateY(180deg);
         }
     </style>
@@ -61,14 +53,84 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-screen py-8 justify-center align-middle items-center flex overflow-x-scroll bg-white">
-            <div class="flex  flex-nowrap w-max">
-                <div class="_flip-box w-72 h-5/6 ">
-                    <div class="_flip-box-inner text-center relative w-full h-full">
-                        <div class="_flib-box-front w-full h-full absolute">
+        <div class="w-full h-screen px-24 py-8 justify-center align-middle items-center overflow-x-scroll no-scrollbar bg-white">
+            <div class="flex flex-nowrap w-max h-5/6 justify-center mx-10">
+                <div class="flip-box w-72 h-full inline-block mx-5">
+                    <div class="flip-box-inner text-center relative w-full h-full">
+                        <div class="flib-box-front w-full h-full absolute">
                             <img src="{{ url('img/staff1.jpg') }}" alt="" class="rounded-xl w-full h-full">
                         </div>
-                        <div class="_flip-box-back w-full h-full absolute border-2 border-blue-900 rounded-xl"></div>
+                        <div class="flip-box-back w-full h-full absolute border-2 border-blue-900 bg-white text-blue-900 flex align-middle items-center justify-center rounded-xl">
+                            <div class="text-center px-4">
+                                <div class="text-3xl font-semibold capitalize my-4">Sir. Dona J. Pichap</div>
+                                <div class="text-2xl font-semibold capitalize my-4">Chief Executive Officer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box w-72 h-full inline-block mx-5">
+                    <div class="flip-box-inner text-center relative w-full h-full">
+                        <div class="flib-box-front w-full h-full absolute">
+                            <img src="{{ url('img/staff2.jpg') }}" alt="" class="rounded-xl w-full h-full">
+                        </div>
+                        <div class="flip-box-back w-full h-full absolute border-2 border-blue-900 bg-white text-blue-900 flex align-middle items-center justify-center rounded-xl">
+                            <div class="text-center px-4">
+                                <div class="text-3xl font-semibold capitalize my-4">Dr Kungfu Json</div>
+                                <div class="text-2xl font-semibold capitalize my-4">Operations Manager</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box w-72 h-full inline-block mx-5">
+                    <div class="flip-box-inner text-center relative w-full h-full">
+                        <div class="flib-box-front w-full h-full absolute">
+                            <img src="{{ url('img/staff3.jpg') }}" alt="" class="rounded-xl w-full h-full">
+                        </div>
+                        <div class="flip-box-back w-full h-full absolute border-2 border-blue-900 bg-white text-blue-900 flex align-middle items-center justify-center rounded-xl">
+                            <div class="text-center px-4">
+                                <div class="text-3xl font-semibold capitalize my-4">Mr Eva T. Kotchiy</div>
+                                <div class="text-2xl font-semibold capitalize my-4">Secratary General</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box w-72 h-full inline-block mx-5">
+                    <div class="flip-box-inner text-center relative w-full h-full">
+                        <div class="flib-box-front w-full h-full absolute">
+                            <img src="{{ url('img/staff4.jpg') }}" alt="" class="rounded-xl w-full h-full">
+                        </div>
+                        <div class="flip-box-back w-full h-full absolute border-2 border-blue-900 bg-white text-blue-900 flex align-middle items-center justify-center rounded-xl">
+                            <div class="text-center px-4">
+                                <div class="text-3xl font-semibold capitalize my-4">Mr. Polizan Chopac</div>
+                                <div class="text-2xl font-semibold capitalize my-4">Chief sales officer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box w-72 h-full inline-block mx-5">
+                    <div class="flip-box-inner text-center relative w-full h-full">
+                        <div class="flib-box-front w-full h-full absolute">
+                            <img src="{{ url('img/staff5.jpg') }}" alt="" class="rounded-xl w-full h-full">
+                        </div>
+                        <div class="flip-box-back w-full h-full absolute border-2 border-blue-900 bg-white text-blue-900 flex align-middle items-center justify-center rounded-xl">
+                            <div class="text-center px-4">
+                                <div class="text-3xl font-semibold capitalize my-4">Sir. Anya Topa John</div>
+                                <div class="text-2xl font-semibold capitalize my-4">Customer attendant officer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box w-72 h-full inline-block mx-5">
+                    <div class="flip-box-inner text-center relative w-full h-full">
+                        <div class="flib-box-front w-full h-full absolute">
+                            <img src="{{ url('img/staff6.jpg') }}" alt="" class="rounded-xl w-full h-full">
+                        </div>
+                        <div class="flip-box-back w-full h-full absolute border-2 border-blue-900 bg-white text-blue-900 flex align-middle items-center justify-center rounded-xl">
+                            <div class="text-center px-4">
+                                <div class="text-3xl font-semibold capitalize my-4">Mr. Baju Sidon</div>
+                                <div class="text-2xl font-semibold capitalize my-4">Chief Survey officer</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

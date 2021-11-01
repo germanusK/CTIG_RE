@@ -1,15 +1,16 @@
 
     <div class="w-full border-b-2 border-b-gray-700">
         <div class="grid grid-cols-1 md:grid-cols-2 bg-transparent pr-4 py-2 w-full">
-            <div class="py-6 px-auto grid grid-cols-3">
-				<a href=" {{ url('/') }} " class="col-span-1 mx-auto my-2 w-16 h-16 rounded-full overflow-hidden text-gray-700"><img src=" {{ url('img\logo.jpg') }} " alt="BRAND IMAGE" class="w-16 h-16 rounded-full"><br>CT PROPERTY</a>
+            <div class="px-auto grid grid-cols-3">
+				<a href=" {{ url('/') }} " class="col-span-1 mx-auto my-2 w-14 h-14 rounded-full overflow-hidden text-gray-700"><img src=" {{ url('img\logo.jpg') }} " alt="BRAND IMAGE" class="w-14 h-14 rounded-full"><br>CT PROPERTY</a>
             </div>
             <div class="justify-end text-right">
-                <a href="https://mylfcglobal.com/register" class="font-serif font-semibold text-blue-700 hover:underline mx-4 my-2 items-baseline">signup</a>
-                <a href=" {{ url('login') }} " class="font-serif font-semibold text-blue-700 hover:underline mx-4 my-2 items-baseline">login</a>
+                <a href="https://mylfcglobal.com/register" class="font-serif font-semibold text-blue-700 hover:underline mx-4 items-baseline">signup</a>
+                <a href=" {{ url('login') }} " class="font-serif font-semibold text-blue-700 hover:underline mx-4 items-baseline">login</a>
             </div>
         </div>
-        <div class="justify-items-right pr-6 text-right py-4 w-ful">
+		<button class="hidden " id="nav_toggler"><img src="{{ url('img/menu.jpg') }}" alt="Menu" class="w-10 h-10 m-2"></button>
+        <div class="justify-items-right pr-6 text-right py-1 w-ful" id="nav">
                 <span class="px-6 py-2 text-blue-100 hover:shadow-2xl shadow-inner font-semibold font-serif bg-gray-800"><a href=" {{ url('/') }} ">Home</a></span>
                 <span class="px-6 py-2 text-blue-100 hover:shadow-2xl shadow-inner font-semibold font-serif bg-gray-800"><a href=" {{ url('property') }} ">Property</a></span>
                 <span class="px-6 py-2 text-blue-100 hover:shadow-2xl shadow-inner font-semibold font-serif bg-gray-800"><a href=" {{ url('testimony') }} ">Testimony</a></span>
