@@ -18,11 +18,10 @@ class CreateSitesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('site_number');
+            $table->string('site_map');
             $table->timestamps();
-        });
-
-        Schema::table('sites', function (Blueprint $table) {
-           $table->foreignId('location_id')->references('id')->on('locations')->onUpdate('cascade');
+            $table->unsignedBigInteger('location_id')->default(1);
+            $table->foreign('location_id')->references('id')->on('locations');
         });
     }
 

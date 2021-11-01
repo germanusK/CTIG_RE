@@ -22,7 +22,7 @@ class CreateTestimoniesTable extends Migration
 
         Schema::table('testimonies', function (Blueprint $table) {
             $table->foreignId('asset_id')->references('id')->on('assets');
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade');
         });
     }
 

@@ -26,7 +26,8 @@ class SitesFactory extends Factory
             //
             'name'=>$this->faker->name(),
             'site_number'=>$this->faker->buildingNumber(),
-            'location_id'=>Locations::factory(1)->create()->first()
+            'location_id'=>Locations::factory(1)->create()->first(),
+            'site_map'=>$this->faker->namespace
         ];
     }
 }

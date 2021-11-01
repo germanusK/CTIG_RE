@@ -24,8 +24,7 @@ class AppointmentsFactory extends Factory
     {
         return [
             //
-            'set_date'=>$this->faker->date(),
-            'set_time'=>$this->faker->time(),
+            'set_time'=>$this->faker->dateTime(),
             'fee'=>$this->faker->numberBetween(10, 30),
             'status'=>$this->faker->numberBetween(0, 1),
             'email'=>$this->faker->email(),

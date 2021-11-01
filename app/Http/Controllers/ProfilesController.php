@@ -92,13 +92,13 @@ class ProfilesController extends Controller
       public function readMany(Request $request)
       {
           # code...
-          return Profile::collection(Profiles::all());
+          return Profiles::all();
       }
   
       public function readOne(Request $request)
       {
           # code...
-          return new Profile($request);
+          return Profiles::find($request->id);
       }
   
       public function writeMany(Request $request)

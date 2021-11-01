@@ -95,12 +95,18 @@ class AboutController extends Controller
     public function readOne(Request $request)
     {
         # code...
-        return new ResourcesAbout($request);
+        return About::find($request->id);
     }
 
     public function writeMany(Request $request)
     {
         # code...
+        $arr = [];
+        foreach ($request->data as $key => $about) {
+            # code...
+            $arr[$key]->key = $about->key;
+            $arr[$key]->value = $about->value;
+        }
     }
 
     public function writeOne(Request $request)

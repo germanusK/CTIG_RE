@@ -20,6 +20,7 @@ class CreateAssetsTable extends Migration
             $table->integer('status')->default(1);//0 = taken, 1 = available
             $table->string('block_number')->unique();
             $table->string('description');
+            $table->binary('image');
             $table->timestamps();
         });
 

@@ -9,7 +9,7 @@ class Sites extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'site_number', 'location_id'];
+    protected $fillable = ['name', 'site_number', 'site_map', 'location_id'=>1];
 
     public function assets()
     {
@@ -20,3 +20,5 @@ class Sites extends Model
         return $this->hasMany(Appointments::class);
     }
 }
+
+?>
