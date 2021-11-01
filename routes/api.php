@@ -198,73 +198,32 @@ Route::group(['prefix'=>'frontend'], function(){
 
     Route::get('/assets', [AssetsController::class, 'readMany']);
     Route::get('/assets/{id}', [AssetsController::class, 'readOne']);
-    // Route::post('/assets', [AssetsController::class, 'writeMany']);
-    // Route::post('/assets/{id}', [AssetsController::class, 'writeOne']);
-    // Route::put('/assets', [AssetsController::class, 'putMany']);
-    // Route::put('/assets/{id}', [AssetsController::class, 'putOne']);
-    // Route::delete('/assets', [AssetsController::class, 'deleteMany']);
-    // Route::delete('/assets/{id}', [AssetsController::class, 'deleteOne']);
-
 
     Route::get('/sites', [SitesController::class, 'readMany']);
     Route::get('/sites/{id}', [SitesController::class, 'readOne']);
-    // Route::post('/sites', [SitesController::class, 'writeMany']);
-    // Route::post('/sites/{id}', [SitesController::class, 'writeOne']);
-    // Route::put('/sites', [SitesController::class, 'putMany']);
-    // Route::put('/sites/{id}', [SitesController::class, 'putOne']);
-    // Route::delete('/sites', [SitesController::class, 'deleteMany']);
-    // Route::delete('/sites/{id}', [SitesController::class, 'deleteOne']);
-
 
     Route::get('/categories', [CategoriesController::class, 'readMany']);
     Route::get('/categories/{id}', [CategoriesController::class, 'readOne']);
-    // Route::post('/categories', [CategoriesController::class, 'writeMany']);
-    // Route::post('/categories/{id}', [CategoriesController::class, 'writeOne']);
-    // Route::put('/categories', [CategoriesController::class, 'putMany']);
-    // Route::put('/categories/{id}', [CategoriesController::class, 'putOne']);
-    // Route::delete('/categories', [CategoriesController::class, 'deleteMany']);
-    // Route::delete('/categories/{id}', [CategoriesController::class, 'deleteOne']);
     
 
     Route::get('/transactions', [TransactionsController::class, 'readMany']);
     Route::get('/transactions/{id}', [TransactionsController::class, 'readOne']);
-    // Route::post('/transactions', [TransactionsController::class, 'writeMany']);
-    // Route::post('/transactions/{id}', [TransactionsController::class, 'writeOne']);
-    // Route::put('/transactions', [TransactionsController::class, 'putMany']);
-    // Route::put('/transactions/{id}', [TransactionsController::class, 'putOne']);
-    // Route::delete('/transactions', [TransactionsController::class, 'deleteMany']);
-    // Route::delete('/transactions/{id}', [TransactionsController::class, 'deleteOne']);
     
 
     Route::get('/testimonies', [TestimoniesController::class, 'readMany']);
     Route::get('/testimonies/{id}', [TestimoniesController::class, 'readOne']);
     Route::post('/testimonies', [TestimoniesController::class, 'writeMany']);
     Route::post('testimonies/{id}', [TestimoniesController::class, 'writeOne']);
-    // Route::put('/testimonies', [TestimoniesController::class, 'putMany']);
-    // Route::put('/testimonies/{id}', [TestimoniesController::class, 'putOne']);
-    // Route::delete('/testimonies', [TestimoniesController::class, 'deleteMany']);
-    // Route::delete('/testimonies/{id}', [TestimoniesController::class, 'deleteOne']);
     
 
     Route::get('/appointments', [AppointmentsController::class, 'readMany']);
     Route::get('/appointments/{id}', [AppointmentsController::class, 'readOne']);
     Route::post('/appointments', [AppointmentsController::class, 'writeMany']);
     Route::post('appointments/{id}', [AppointmentsController::class, 'writeOne']);
-    // Route::put('/appointments', [AppointmentsController::class, 'putMany']);
-    // Route::put('/appointments/{id}', [AppointmentsController::class, 'putOne']);
-    // Route::delete('/appointments', [AppointmentsController::class, 'deleteMany']);
-    // Route::delete('/appointments/{id}', [AppointmentsController::class, 'deleteOne']);
     
-
 
     Route::get('/locations', [LocationsController::class, 'readMany']);
     Route::get('/locations/{id}', [LocationsController::class, 'readOne']);
-    // Route::post('/locations', [LocationsController::class, 'writeMany']);
-    // Route::post('locations/{id}', [LocationsController::class, 'writeOne']);
-    // Route::put('/locations', [LocationsController::class, 'putMany']);
-    // Route::put('/locations/{id}', [LocationsController::class, 'putOne']);
-    // Route::delete('/locations', [LocationsController::class, 'deleteMany']);
-    // Route::delete('/locations/{id}', [LocationsController::class, 'deleteOne']);
     
 
     Route::get('/about', [AboutController::class, 'readMany']);
