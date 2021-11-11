@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AppointmentsController;
 use App\Http\Controllers\AssetDetails;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PropertyController;
@@ -12,10 +13,13 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\CustomersController;
 use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SiteDetails;
+use App\Models\Appointments;
+use App\Models\Testimonies;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,13 +33,15 @@ use App\Http\Controllers\SiteDetails;
 */
 
 Route::get('/', function(){return view('front-end.landing');});
-Route::get('/home', function () {return view('front-end.welcome');});
+Route::get('/home', [Controller::class, 'show_home']);
 Route::get('/property', [PropertyController::class, 'show']);
-Route::get('/details', [PropertyDetailsController::class, 'show']);
+Route::get('/details/{id}', [PropertyDetailsController::class, 'show']);
 Route::get('/testimony', [TestimonyController::class, 'show']);
 Route::get('/contact', [ContactController::class, 'show']);
 Route::get('/about', [AboutController::class, 'show']);
 Route::get('/login', [LoginController::class, 'show']);
+Route::post('/appointments/{id}/payment', [PropertyDetailsController::class, 'trigger_visit_payment']);
+Route::get('/appointments/{id}', [PropertyDetailsController::class, 'trigger_visit']);
 
 
 
@@ -56,6 +62,8 @@ Route::group(['prefix'=>'/dashboard'], function()
             Route::get('/{id}/edit', [SiteController::class, 'edit']);
             Route::get('/{id}/details', [SiteController::class, 'details']);
             Route::get('/{id}/on_delete', [SiteDetails::class, 'on_delete']);
+            Route::get('/{id}/delete', [SiteDetails::class, 'delete']);
+            Route::get('/{id}/site_map', [SiteDetails::class, 'show_map']);
             Route::get('/', [SiteController::class, 'index']);
     });
     Route::group(['prefix'=>'/categories'], function(){
@@ -71,5 +79,16 @@ Route::group(['prefix'=>'/dashboard'], function()
     Route::group(['prefix'=>'/profile'], function(){
             Route::get('/', [ProfilesController::class, 'index']);
             Route::get('/{id}/edit', [ProfilesController::class, 'edit']);
+    });
+    Route::group(['prefix'=>'/appointments'], function(){
+            Route::get('/{id}', [AppointmentsController::class, 'read']);
+            Route::put('/update/{id}', [AppointmentsController::class, 'put']);
+            Route::put('/{id}', [AppointmentsController::class, 'put_many']);
+            Route::get('/', [AppointmentsController::class, 'index']);
+    });
+    Route::group(['prefix'=>'/testimonies'], function(){
+            Route::get('/', [TestimonyController::class, 'index']);
+            Route::put('/publish/{id}', [TestimonyController::class, 'put']);
+            Route::delete('./delete/{id}', [TestimonyController::class, 'delete']);
     });
 });

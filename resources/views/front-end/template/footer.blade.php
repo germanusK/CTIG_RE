@@ -8,7 +8,7 @@
     <div class="px-2 py-6 bg-gray-600 border-0 border-l-2 border-gray-400 h-full">
         <div class="text-center text-white text-lg font-semibold">Navigation</div>
         <div>
-            <div class="text-center"><a href=" {{ url('/') }} " class=" text-white hover:font-semibold">Home</a></div>
+            <div class="text-center"><a href=" {{ url('home') }} " class=" text-white hover:font-semibold">Home</a></div>
             <div class="text-center"><a href=" {{ url('property') }} " class=" text-white hover:font-semibold">Property</a></div>
             <div class="text-center"><a href=" {{ url('testimony') }} " class=" text-white hover:font-semibold">Testimony</a></div>
             <div class="text-center"><a href=" {{ url('about') }}" class=" text-white hover:font-semibold">About</a></div>

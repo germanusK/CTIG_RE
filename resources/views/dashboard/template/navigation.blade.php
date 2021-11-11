@@ -10,6 +10,8 @@
         <a href=" {{ url('dashboard/sites') }} " class="block text-right text-lg text-gray-200 hover:text-blue-900 bg-blue-900 hover:bg-gray-200 border-b-2 border-gray-700 hover:border-gray-400 px-3 py-3 font-semibold capitalize">sites</a>
         <a href=" {{ url('dashboard/categories') }} " class="block text-right text-lg text-gray-200 hover:text-blue-900 bg-blue-900 hover:bg-gray-200 border-b-2 border-gray-700 hover:border-gray-400 px-3 py-3 font-semibold capitalize">categories</a>
         <a href=" {{ url('dashboard/customers') }} " class="block text-right text-lg text-gray-200 hover:text-blue-900 bg-blue-900 hover:bg-gray-200 border-b-2 border-gray-700 hover:border-gray-400 px-3 py-3 font-semibold capitalize">customers</a>
+        <a href=" {{ url('dashboard/appointments/') }} " class="block text-right text-lg text-gray-200 hover:text-blue-900 bg-blue-900 hover:bg-gray-200 border-b-2 border-gray-700 hover:border-gray-400 px-3 py-3 font-semibold capitalize">Appointments</a>
+        <a href=" {{ url('dashboard/testimonies') }} " class="block text-right text-lg text-gray-200 hover:text-blue-900 bg-blue-900 hover:bg-gray-200 border-b-2 border-gray-700 hover:border-gray-400 px-3 py-3 font-semibold capitalize">testimonies</a>
         <a href=" {{ url('dashboard/profile') }} " class="block text-right text-lg text-gray-200 hover:text-blue-900 bg-blue-900 hover:bg-gray-200 border-b-2 border-gray-700 hover:border-gray-400 px-3 py-3 font-semibold capitalize">profile</a>
     </div>
 </div>

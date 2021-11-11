@@ -21,11 +21,17 @@
             'sites'=>'http://localhost:8001/api/dashboard/sites',
             'create_site'=>'http://localhost:8001/api/dashboard/sites/one',
             'trending_sites'=>'http://localhost:8001/api/dashboard/sites/trending',
+            'shuffle_sites'=>'http://localhost:8001/api/dashboard/sites/shuffle',
             'detailed_sites'=>'http://localhost:8001/api/dashboard/sites/details',
 
 
             'pending_visits'=>'http://localhost:8001/api/dashboard/visits/pending',
 
+         ],
+         'api_frontend_routes'=>[
+             'sites'=>'http://localhost:8001/api/frontend/sites',
+             'shuffle_sites'=>'http://localhost:8001/api/frontend/sites/shuffle',
+             'latest_sites'=>'http://localhost:8001/api/frontend/sites/latest'
          ],
     ];
 

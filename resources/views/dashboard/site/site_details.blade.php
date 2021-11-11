@@ -27,10 +27,20 @@
                 <div class="w-full h-full grid grid-cols-5">
                     <img src="{{ url($map_path) }}" alt="" class="col-span-5 md:col-span-3 w-full h-full">
                     <div class="col-span-5 md:col-span-2 flex align-middle items-center justify-center">
-                        <div> site detailed data
+                        <div class="shadow m-3 py-6 px-2"> 
+                            <div class="justify-center">
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>name</strong> : {{ $site['name'] }}</span>
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Site number</strong> : {{ $site['site_number'] }}</span>
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Created on</strong> : {{ $site['created_at'] }}</span>
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Last updated on</strong> : {{ $site['updated_at'] }}</span>
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong> Contains </strong> : {{ $site['asset_count'] }} assets</span>
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong> Coordinates </strong> : {{ $site['latitude'] }} / {{ $site['longitude'] }} </span>
+                                <span class="block border-b-2 border-gray-100 text-lg mx-3 text-justify py-2"> <strong> Located at: </strong> <strong> {{ $site['location_name'] }} </strong>; {{ $site['description'] }}</span>
+                            </div>
+                            
                             <div class="flex w-full justify-center py-3 px-5">
-                                <a href="{{ url('/dashboard/sites/'.'$site->id'.'/edit') }}" class="px-3 py-1 rounded mx-2 bg-blue-200 text-blue-600 font-semibold">edit</a>
-                                <a href="{{ url('/dashboard/sites/'.'$site->id'.'/on_delete') }}" class="px-3 py-1 rounded mx-2 bg-blue-200 text-blue-600 font-semibold">delete</a>
+                                <a href="{{ url('/dashboard/sites/'.$site['id'].'/edit') }}" class="px-3 py-1 rounded mx-2 shadow-md text-blue-600 font-semibold">edit</a>
+                                <a href="{{ url('/dashboard/sites/'.$site['id'].'/on_delete') }}" class="px-3 py-1 rounded mx-2 shadow-md text-blue-600 font-semibold">delete</a>
                             </div>
                         </div>
                     </div>

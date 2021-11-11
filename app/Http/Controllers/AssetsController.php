@@ -14,7 +14,7 @@ class AssetsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+    //  * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -47,7 +47,7 @@ class AssetsController extends Controller
         $asset->site_id = $request->site_id;
         $asset->location_id = $request->location_id;
         
-        $response = Http::post('http://localhost:8001/api/dashboard/assets/one', $asset);
+        $response = Http::post('http://localhost:8001/api/dashboard/assets/one', [$asset]);
         if($response == null){
             echo '<script>'
                 .'alert("Failure saving property. Please check your information and try again")'

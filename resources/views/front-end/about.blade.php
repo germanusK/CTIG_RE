@@ -32,10 +32,9 @@
     </style>
     </head>
     <body>
-        <div class="dark_bg absolute h-max w-full bg-gray-700 bg-opacity-80">
+        <!-- <div class="dark_bg absolute h-max w-full"> -->
         @include('front-end/template/header')
-
-        <div class="w-full py-24 text-white text-center text-4xl font-semibold leading-relaxed tracking-wide capitalize">about us</div>
+        <div class="w-full py-20 text-blue-900 text-4xl text-center font-semibold tracking-wide">about us</div>
 
         <div class="w-full h-screen py-8">
             <div class="flip-box w-11/12 sm:w-9/12 h-5/6 mx-auto">

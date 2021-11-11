@@ -24,13 +24,13 @@
             <!-- display section -->
             <div class="w-full max-h-screen overflow-y-scroll no-scrollbar p-2">
                 <?php for ($i=0; $i < count($sites); $i++) { ?>
-                    <a href="{{ url('/dashboard/sites/'.$sites[$i]['id'].'/details') }}">
-                    <div class="h-32 md:h-40 w-full my-3 rounded-lg flex flex-nowrap">
-                        <div class="w-1/3 lg:w-1/4 h-full rounded-l-lg bg-blue-900">
+                    <a href="{{ url('/dashboard/sites/'.$sites[$i]['id'].'/details') }}" class=" hover:no-underline hover:scale-150 hover:text-black">
+                    <div class="h-32 md:h-40 w-full my-3 rounded-lg shadow-lg flex flex-nowrap">
+                        <div class="w-1/3 lg:w-1/4 h-full rounded-l-lg">
                             <img src="{{ url(Config::get('global_vars.api_dashboard_routes.maps').'/'.$sites[$i]['site_map']) }}" alt="" class="w-full h-full rounded-l-lg">
                         </div>
-                        <div class="w-2/3 lg:w-3/4 h-full flex align-middle items-center text-center text-xl font-semibold bg-blue-100 rounded-r-lg">
-                            Site Details: size in number of properties, available size in number of aquirable property, consumed size, location, description
+                        <div class="w-2/3 lg:w-3/4 h-full flex align-middle items-center text-center text-xl font-semibold  shadow-md rounded-r-lg">
+                           <span ></span> name : {{ $sites[$i]['name'] }} / site number : {{ $sites[$i]['site_number'] }} / created on : {{ $sites[$i]['created_at'] }}
                             
                         </div>
                     </div>
