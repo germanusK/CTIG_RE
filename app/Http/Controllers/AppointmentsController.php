@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\Appointment;
 use App\Models\Appointments;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AppointmentsController extends Controller
 {
@@ -88,13 +89,15 @@ class AppointmentsController extends Controller
       public function readMany(Request $request)
       {
           # code...
-          return Appointment::collection(Appointments::all());
+          return DB::table('appointments')
+                ->join('sites', 'sites.id', '=', 'appointments.site_id');
+          
       }
   
       public function readOne(Request $request)
       {
           # code...
-          return Appointment::collection($request);
+          return Appointments::find($request->id);
       }
   
       public function writeMany(Request $request)
@@ -105,6 +108,9 @@ class AppointmentsController extends Controller
       public function writeOne(Request $request)
       {
           # code...
+          $appointment = new Appointments($request->all());
+          $appointment->save();
+          return $appointment;
       }
   
       public function putMany(Request $request)
@@ -125,6 +131,7 @@ class AppointmentsController extends Controller
       public function deleteOne(Request $request)
       {
           # code...
+          Appointments::find($request->id)->delete();
       }
     
 }

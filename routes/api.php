@@ -56,6 +56,8 @@ Route::group(['prefix'=>'dashboard'], function(){
     
 
 
+    Route::get('/sites/trending', [SitesController::class, 'trending_read']);
+    Route::get('/sites/shuffle', [SitesController::class, 'shuffle_read']);
     Route::get('/maps/{fname}', [SitesController::class, 'get_site_map']);
     Route::get('/sites/{id}', [SitesController::class, 'readOne']);
     Route::get('/sites', [SitesController::class, 'readMany']);
@@ -136,7 +138,7 @@ Route::group(['prefix'=>'dashboard'], function(){
 
     Route::get('/permissions/{id}', [PermissionsController::class, 'readOne']);
     Route::get('/permissions', [PermissionsController::class, 'readMany']);
-    Route::post('permissions/{id}', [PermissionsController::class, 'writeOne']);
+    Route::post('/permissions/{id}', [PermissionsController::class, 'writeOne']);
     Route::post('/permissions', [PermissionsController::class, 'writeMany']);
     Route::put('/permissions/{id}', [PermissionsController::class, 'putOne']);
     Route::put('/permissions', [PermissionsController::class, 'putMany']);
@@ -199,8 +201,11 @@ Route::group(['prefix'=>'frontend'], function(){
     Route::get('/assets', [AssetsController::class, 'readMany']);
     Route::get('/assets/{id}', [AssetsController::class, 'readOne']);
 
-    Route::get('/sites', [SitesController::class, 'readMany']);
+    Route::get('/sites/trending', [SitesController::class, 'trending_read']);
+    Route::get('/sites/shuffle', [SitesController::class, 'shuffle_read']);
+    Route::get('/sites', [SitesController::class, 'detail_read_many']);
     Route::get('/sites/{id}', [SitesController::class, 'readOne']);
+    Route::get('/sites/latest', [SitesController::class, 'trending_read']);
 
     Route::get('/categories', [CategoriesController::class, 'readMany']);
     Route::get('/categories/{id}', [CategoriesController::class, 'readOne']);

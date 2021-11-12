@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\Location;
 use App\Models\Locations;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LocationsController extends Controller
 {
@@ -96,7 +97,7 @@ class LocationsController extends Controller
       public function readOne(Request $request)
       {
           # code...
-          return new Location($request);
+          return Locations::find($request->id);
       }
   
       public function writeMany(Request $request)
@@ -107,6 +108,11 @@ class LocationsController extends Controller
       public function writeOne(Request $request)
       {
           # code...
+          $location = new Locations();
+          $location->name = $request->name;
+          $location->latitude = $request->latitude;
+          $location->longitude = $request->longitude;
+          $location->description = $request->description;
       }
   
       public function putMany(Request $request)
@@ -114,9 +120,14 @@ class LocationsController extends Controller
           # code...
       }
   
-      public function putOne(Request $request)
+      public function putOne(Request $request, $data)
       {
           # code...
+          $res = DB::table('locations')
+                    ->where('locations.id', '=', $request->id)
+                    ->update($data);
+
+            return $res;
       }
   
       public function deleteMany(Request $request)
@@ -127,5 +138,6 @@ class LocationsController extends Controller
       public function deleteOne(Request $request)
       {
           # code...
+          return Locations::find($request->id)->delete();
       }
 }

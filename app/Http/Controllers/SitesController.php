@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\Site;
+use App\Models\Assets;
+use App\Models\Locations;
 use App\Models\Sites;
 use DateTime;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\DB;
 
 class SitesController extends Controller
 {
@@ -106,7 +109,31 @@ class SitesController extends Controller
       public function readOne(Request $request)
       {
           # code...
-          return Sites::find($request->id);
+          $site = Sites::find($request->id);
+          $location = Locations::find($site->location_id);
+        
+          $site->location_name = $location->name;
+          $site->description = $location->description;
+          $site->latitude = $location->latitude;
+          $site->longitude = $location->longitude;
+          $site->asset_count = DB::table('assets')->where('assets.site_id', '=', $request->id)->count();
+          return $site;
+      }
+      public function detail_read_many()
+      {
+          # code...
+          return DB::select("SELECT locations.*, locations.name as situated_at, sites.* from locations right join sites on locations.Id = sites.location_id");
+      }
+
+      public function shuffle_read()
+      {
+          # code...
+          return DB::select("SELECT locations.*, locations.name as situated_at, sites.* from locations right join sites on locations.Id = sites.location_id ORDER BY RAND()");
+      }
+      public function trending_read()
+      {
+          # code...
+          return DB::select("SELECT locations.*, locations.name as situated_at, sites.*  from locations right join sites on locations.Id = sites.location_id ORDER BY sites.created_at DESC");
       }
   
       public function writeMany(Request $request)
@@ -136,7 +163,7 @@ class SitesController extends Controller
           $file = $request->file('site_map');
           $extension = $file->getClientOriginalExtension();
           $file_name = time().rand(10000000000, 99999999999).'.'.$extension;
-          $file->move(public_path('unploads/sites'), $file_name);
+          $file->move(public_path('uploads/sites'), $file_name);
           $site->site_map = $file_name;
 
           $site->save();
@@ -149,18 +176,25 @@ class SitesController extends Controller
           # code...
       }
   
-      public function putOne(Request $request)
+      public function putOne(Request $request, $data)
       {
           # code...
+          $res = DB::table('sites')
+                ->where('id', $request->id)
+                ->update($data);
+            return $res;
+
       }
   
       public function deleteMany(Request $request)
       {
           # code...
+          
       }
   
       public function deleteOne(Request $request)
       {
           # code...
+          return DB::table('sites')->where('sites.id', '=', $request->id)->delete();
       }
 }
