@@ -26,8 +26,8 @@ class TestimoniesFactory extends Factory
         return [
             //
             'message'=>$this->faker->text(),
-            'asset_id'=>Assets::factory(1)->create()->first(),
-            'user_id'=>User::factory(1)->create()->first()
+            // 'asset_id'=>Assets::factory(1)->create()->first(),
+            // 'user_id'=>User::factory(1)->create()->first()
         ];
     }
 }

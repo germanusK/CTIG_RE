@@ -14,7 +14,7 @@ class AssetsSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\Assets::factory(50)->create();
+        \App\Models\Assets::factory(10)->create();
 
     }
 }

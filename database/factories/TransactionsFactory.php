@@ -26,7 +26,7 @@ class TransactionsFactory extends Factory
             //
             'amount'=>$this->faker->numberBetween(1),
             'reason'=>$this->faker->text(),
-            'user_id'=>User::factory(1)->create()->first()
+            // 'user_id'=>User::factory(1)->create()->first()
         ];
     }
 }

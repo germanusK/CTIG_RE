@@ -23,13 +23,13 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->unsignedBigInteger('role_id')->nullable();
+            
         });
 
-        Schema::table('users', function (Blueprint $table) {
- 
-            $table->foreignId('role_id')->references('id')->on('roles')->onUpdate('cascade');
-
-        });
+        // Schema::table('users', function (Blueprint $table) {   
+        //     $table->foreignId('role_id')->references('id')->on('roles')->onUpdate('cascade');
+        // });
     }
 
     /**

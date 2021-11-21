@@ -22,11 +22,12 @@ class CreateAppointmentsTable extends Migration
             $table->string('email');
             $table->string('client_name');
             $table->timestamps();
+            $table->unsignedBigInteger('site_id')->nullable();
         });
 
-        Schema::table('appointments', function (Blueprint $table) {
-            $table->foreignId('site_id')->references('id')->on('sites')->onUpdate('cascade');
-        });
+        // Schema::table('appointments', function (Blueprint $table) {
+        //     $table->foreignId('site_id')->references('id')->on('sites')->onUpdate('cascade');
+        // });
     }
 
     /**

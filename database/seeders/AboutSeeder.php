@@ -14,7 +14,7 @@ class AboutSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\About::factory(50)->create();
+        \App\Models\About::factory(10)->create();
 
     }
 }

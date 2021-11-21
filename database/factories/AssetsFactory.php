@@ -31,9 +31,9 @@ class AssetsFactory extends Factory
         'block_number'=>$this->faker->buildingNumber(),
         'description'=>$this->faker->text(),
         'image'=>$this->faker->image(),
-        'location_id'=>Locations::factory(1)->create()->first(),
-        'category_id'=>Categories::factory(1)->create()->first(),
-        'site_id'=>Sites::factory(1)->create()->first()
+        // 'location_id'=>Locations::factory(1, true)->create()->first()->id,
+        // 'category_id'=>Categories::factory(1)->create()->first()->id,
+        // 'site_id'=>Sites::factory(1)->create()->first()->id
         ];
     }
 }

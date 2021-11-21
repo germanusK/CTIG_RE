@@ -14,6 +14,6 @@ class RolePermissionSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\RolePermission::factory(72)->create();
+        \App\Models\RolePermission::factory(10)->create();
     }
 }

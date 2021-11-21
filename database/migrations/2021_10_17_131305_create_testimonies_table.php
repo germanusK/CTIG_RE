@@ -18,12 +18,15 @@ class CreateTestimoniesTable extends Migration
             $table->id();
             $table->string('message');
             $table->timestamps();
+            $table->unsignedBigInteger('asset_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
         });
 
-        Schema::table('testimonies', function (Blueprint $table) {
-            $table->foreignId('asset_id')->references('id')->on('assets');
-            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade');
-        });
+        // Schema::table('testimonies', function (Blueprint $table) {
+            
+        //     $table->foreignId('asset_id')->references('id')->on('assets');
+        //     $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade');
+        // });
     }
 
     /**

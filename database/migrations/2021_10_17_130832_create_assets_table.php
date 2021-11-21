@@ -22,12 +22,17 @@ class CreateAssetsTable extends Migration
             $table->string('description');
             $table->binary('image');
             $table->timestamps();
+            $table->unsignedBigInteger('location_id')->nullable();
+            // $table->foreign('location_id')->references('id')->on('locations');
+            $table->unsignedBigInteger('category_id')->nullable();
+            // $table->foreignId('category_id')->references('id')->on('categories');
+            $table->unsignedBigInteger('site_id')->nullable();
+            // $table->foreignId('site_id')->references('id')->on('sites');
         });
 
         Schema::table('assets', function (Blueprint $table) {
-            $table->foreignId('location_id')->references('id')->on('locations')->onUpdate('cascade');
-            $table->foreignId('category_id')->references('id')->on('categories')->onUpdate('cascade');
-            $table->foreignId('site_id')->references('id')->on('sites')->onUpdate('cascade');
+            
+            
         });
     }
 

@@ -25,8 +25,7 @@ class LocationsFactory extends Factory
             //
             'name'=>$this->faker->streetName(),
             'description'=>$this->faker->text(),
-            'latitude'=>$this->faker->latitude(),
-            'longitude'=>$this->faker->longitude()
+            'coords'=>$this->faker->localCoordinates(),
         ];
     }
 }

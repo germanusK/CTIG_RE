@@ -13,6 +13,6 @@ class TestimoniesSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Testimonies::factory(50)->create();
+        \App\Models\Testimonies::factory(10)->create();
     }
 }

@@ -14,7 +14,7 @@ class AppointmentsSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\Appointments::factory(50)->create();
+        \App\Models\Appointments::factory(10)->create();
 
     }
 }

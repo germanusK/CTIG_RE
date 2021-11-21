@@ -14,6 +14,6 @@ class PermissionsSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\permissions::factory(50)->create();
+        \App\Models\permissions::factory(10)->create();
     }
 }

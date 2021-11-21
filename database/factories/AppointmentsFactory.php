@@ -29,7 +29,7 @@ class AppointmentsFactory extends Factory
             'status'=>$this->faker->numberBetween(0, 1),
             'email'=>$this->faker->email(),
             'client_name'=>$this->faker->name(),
-            'site_id'=>Sites::factory(1)->create()->first()
+            // 'site_id'=>Sites::factory(1)->create()->first()
         ];
     }
 }

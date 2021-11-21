@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Mockery\Generator\StringManipulation\Pass\Pass;
+use Mockery\Undefined;
 
 class SitesController extends Controller
 {
@@ -112,11 +114,14 @@ class SitesController extends Controller
           $site = Sites::find($request->id);
           $location = Locations::find($site->location_id);
         
-          $site->location_name = $location->name;
-          $site->description = $location->description;
-          $site->latitude = $location->latitude;
-          $site->longitude = $location->longitude;
-          $site->asset_count = DB::table('assets')->where('assets.site_id', '=', $request->id)->count();
+          isset($location->name) ? $site->location_name = $location->name : null;
+          isset($location->description) ? $site->description = $location->description: null;
+          isset($location->coords) ? $site->coords = $location->coords : null ;
+        //   $site->asset_count = DB::table('assets')->where('assets.site_id', '=', $request->id)->count();
+        //   if ($site->asset_count < 1) {
+        //       # code...
+        //       unset($site->asset_count);
+        //   }
           return $site;
       }
       public function detail_read_many()

@@ -26,7 +26,7 @@ class ProfilesFactory extends Factory
             //
             'photo'=>$this->faker->image(),
             'story'=>$this->faker->text(),
-            'user_id'=>User::factory(1)->create()->first()
+            // 'user_id'=>User::factory(1)->create()->first()
         ];
     }
 }

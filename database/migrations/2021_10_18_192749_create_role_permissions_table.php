@@ -17,12 +17,15 @@ class CreateRolePermissionsTable extends Migration
             $table->engine = "InnoDB";
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('role_id')->nullable();
+            $table->unsignedBigInteger('permission_id')->nullable();
+
         });
 
-        Schema::table('role_permissions', function (Blueprint $table) {
-            $table->foreignId('role_id')->references('id')->on('roles')->onUpdate('cascade')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('permission_id')->references('id')->on('permissions')->onDelete('cascade')->onUpdate('cascade');
-        });
+        // Schema::table('role_permissions', function (Blueprint $table) {
+        //     $table->foreignId('role_id')->references('id')->on('roles')->onUpdate('cascade')->onUpdate('cascade')->onDelete('cascade');
+        //     $table->foreignId('permission_id')->references('id')->on('permissions')->onDelete('cascade')->onUpdate('cascade');
+        // });
     }
 
     /**

@@ -19,10 +19,11 @@ class CreateTransactionsTable extends Migration
             $table->integer('amount');
             $table->string('reason');
             $table->timestamps();
+            $table->unsignedBigInteger('user_id')->nullable();
         });
-        Schema::table('transactions', function (Blueprint $table) {
-            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade');
-        });
+        // Schema::table('transactions', function (Blueprint $table) {
+        //     $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade');
+        // });
     }
 
     /**

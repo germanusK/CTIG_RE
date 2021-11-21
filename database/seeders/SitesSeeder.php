@@ -14,7 +14,7 @@ class SitesSeeder extends Seeder
     public function run()
     {
         //
-        \App\Models\Sites::factory(50)->create();
+        \App\Models\Sites::factory(10)->create();
 
     }
 }

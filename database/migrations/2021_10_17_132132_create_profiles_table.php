@@ -19,11 +19,12 @@ class CreateProfilesTable extends Migration
             $table->binary('photo');
             $table->string('story');
             $table->timestamps();
+            $table->unsignedBigInteger('user_id')->nullable();
         });
 
-        Schema::table('profiles', function (Blueprint $table) {
-            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-        });
+        // Schema::table('profiles', function (Blueprint $table) {
+        //     $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+        // });
     }
 
     /**

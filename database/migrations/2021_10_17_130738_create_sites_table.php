@@ -20,10 +20,16 @@ class CreateSitesTable extends Migration
             $table->string('site_number');
             $table->string('site_map');
             $table->timestamps();
-            $table->unsignedBigInteger('location_id')->default(1);
-            $table->foreign('location_id')->references('id')->on('locations');
+            $table->unsignedBigInteger('location_id')->nullable();
         });
+
+        // Schema::table('sites', function(Blueprint $table){
+            
+        //     $table->foreign('location_id')->references('id')->on('locations');
+        // });
     }
+
+
 
     /**
      * Reverse the migrations.
