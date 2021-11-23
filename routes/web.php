@@ -41,8 +41,8 @@ Route::get('/contact', [ContactController::class, 'show']);
 Route::get('/about', [AboutController::class, 'show']);
 Route::get('/login', [LoginController::class, 'show']);
 Route::post('/appointments/{id}/payment', [PropertyDetailsController::class, 'trigger_visit_payment']);
+Route::post('/appointments/{id}/save', [PropertyDetailsController::class, 'trigger_save_visit']);
 Route::get('/appointments/{id}', [PropertyDetailsController::class, 'trigger_visit']);
-
 
 
 Route::group(['prefix'=>'/dashboard'], function()

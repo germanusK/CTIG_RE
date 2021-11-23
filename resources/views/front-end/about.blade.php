@@ -15,7 +15,8 @@
         }
         /* This container is needed to position the front and back side */
         .flip-box-inner {
-            transition: transform 0.8s;
+            transition: transform 1.5s cubic-bezier(1, 0, 0, 1);
+
             transform-style: preserve-3d;
         }
 
@@ -34,10 +35,10 @@
     <body>
         <!-- <div class="dark_bg absolute h-max w-full"> -->
         @include('front-end/template/header')
-        <div class="w-full py-20 text-blue-900 text-4xl text-center font-semibold tracking-wide">about us</div>
+        <div class="w-full py-20 text-white text-4xl text-center font-bold tracking-wider animate-pulse">about us</div>
 
         <div class="w-full h-screen py-8">
-            <div class="flip-box w-11/12 sm:w-9/12 h-5/6 mx-auto">
+            <div data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" data-aos-anchor-placement="center-bottom" class="flip-box w-11/12 sm:w-9/12 h-5/6 mx-auto">
                 <div class="flip-box-inner text-center w-full h-full relative">
                     <div class="flip-box-front w-full h-full absolute">
                         <img src="{{ url('img/staff.jpg') }}" alt="TEAM" class="w-full h-full rounded-xl">
@@ -53,7 +54,7 @@
             </div>
         </div>
         <div class="w-full h-screen px-24 py-8 justify-center align-middle items-center overflow-x-scroll no-scrollbar bg-white">
-            <div class="flex flex-nowrap w-max h-5/6 justify-center mx-10">
+            <div data-aos="fade-left" data-aos-duration="1500" data-aos-offset="100" data-aos-anchor-placement="center-bottom" class="flex flex-nowrap w-max h-5/6 justify-center mx-10">
                 <div class="flip-box w-72 h-full inline-block mx-5">
                     <div class="flip-box-inner text-center relative w-full h-full">
                         <div class="flib-box-front w-full h-full absolute">

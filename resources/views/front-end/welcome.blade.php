@@ -25,7 +25,10 @@
                 border-top-right-radius: -35%;
                 border-bottom-right-radius: 190%;
             }
-            
+            .imgt{
+                height: 6rem;
+                width: 7rem;
+            }
         </style>
     </head>
     <body class="antialiased bg-fixed">
@@ -35,13 +38,12 @@
         <div class="h-screen w-full pt-20">
             <div class="w-full md:grid grid-cols-5">
                 <div class-="col-span-2"></div>
-                <div class="col-span-3 text-white text-4xl text-center font-extrabold capitalize pb-10"> welcome to <br><span class="uppercase block">CT Inc real property</span></div>
+                <div class="col-span-3 text-white text-4xl text-center font-extrabold capitalize pb-10  animate-pulse"> welcome to <br><span class="uppercase block">CT Inc real property</span></div>
             </div>
             
-                <div class="col-span-2 grid grid-cols-4">
-                    <div class="text-center text-4xl text-white">W<sup class="text-2xl">3</sup></div>
-                    <div class="col-span-3 overflow-x-scroll whitespace-nowrap overflow-y-hidden no-scrollbar">
-                        <div class="flex w-min"> 
+                <div class="col-span-2">
+                    <div class="overflow-x-scroll whitespace-nowrap overflow-y-hidden no-scrollbar" data-aos="zoom-in-left">
+                        <div class="flex w-min mx-auto animate__animated animate__fadeInTopRight"> 
                             <div class="rounded-lg text-center bg-black mx-2 text-white py-6 px-3 w-60 max-w-sm">
                                 <div class="text-center text-2xl font-semibold capitalize">who we are </div>
                                 <div class="text-xl pt-4 break-words overflow-auto whitespace-pre-wrap h-48"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil saepe provident nemo ducimus expedita eaque</div>
@@ -57,10 +59,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="py-12 sm:w-1/2 text-center justify-center flex">
+                <div id="anchorb1" class="py-12 sm:w-1/2 text-center justify-center flex animate-pulse">
                     <a href="{{ url('login') }}" class="px-6 py-2 mx-3 text-xl bg-black bg-opacity-80 border-2 border-white rounded-full text-white">Login</a>
                     <a href="{{ url('https://mylfcglobal.com/register') }}" class="px-6 py-2 mx-3 text-xl bg-black bg-opacity-80 border-2 border-white rounded-full text-white">Register</a>
                 </div>
+                <script>
+                    let anchorb1 = document.querySelector("#anchorb1");
+                    
+                    
+                </script>
             
         </div>
 
@@ -69,21 +76,21 @@
 
         @endsection
         <div class="bg-white">
-            <div class=" w-10/12 md:w-9/12 mx-auto sm:grid grid-cols-4  gap-2 py-16 px-2 justify-center text-center bg-white">
-                <a href=" {{ url('property') }} " class=" w-52 h-60 mx-auto my-6 rounded">
-                    <img src=" {{ url('img/icon_property.jpg') }} " alt="" class="h-32 w-32 rounded-full mx-auto my-8">
+            <div class=" w-10/12 md:w-9/12 mx-auto sm:grid grid-cols-4  gap-2 py-16 px-2 justify-center text-center bg-white" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <a href=" {{ url('property') }} " class=" w-52 h-60 mx-auto my-6 rounded animate__animated animate__fadeInBottomRight">
+                    <img src=" {{ url('img/icon_property.svg') }} " alt="" class="imgt rounded-md mx-auto my-8">
                     <div class="text-center text-2xl font-bold text-gray-800 capitalize">Our Property</div>
                 </a>
-                <a href=" {{ url('testimony') }} " class=" w-52 h-60 mx-auto my-6 rounded">
-                    <img src=" {{ url('img/icon_testimony.jpeg') }} " alt="" class="h-32 w-32 rounded-full mx-auto my-8">
+                <a href=" {{ url('testimony') }} " class=" w-52 h-60 mx-auto my-6 rounded animate__animated animate__zoomInLeft">
+                    <img src=" {{ url('img/icon_testimonies.svg') }} " alt="" class="imgt rounded-md mx-auto my-8">
                     <div class="text-center text-2xl font-bold text-gray-800 capitalize">Client testimonies</div>
                 </a>
-                <a href=" {{ url('about') }} " class=" w-52 h-60 mx-auto my-6 rounded">
-                    <img src=" {{ url('img/icon_about.jpg') }} " alt="" class="h-32 w-32 rounded-full mx-auto my-8">
+                <a href=" {{ url('about') }} " class=" w-52 h-60 mx-auto my-6 rounded animate__animated animate__zoomInDown">
+                    <img src=" {{ url('img/icon_about.svg') }} " alt="" class="imgt rounded-md mx-auto my-8">
                     <div class="text-center text-2xl font-bold text-gray-800 capitalize">About us</div>
                 </a>
                 <a href=" {{ url('contact') }} " class=" w-52 h-60 mx-auto my-6 rounded">
-                    <img src=" {{ url('img/icon_contact.jpg') }} " alt="" class="h-32 w-32 rounded-full mx-auto my-8">
+                    <img src=" {{ url('img/icon_contacts.svg') }} " alt="" class="imgt rounded-md mx-auto my-8 animate__animated animate__fadeInTopLeft">
                     <div class="text-center text-2xl font-bold text-gray-800 capitalize">contact us</div>
                 </a>
             </div>
@@ -92,19 +99,19 @@
         @section('statistics')
         <!-- system statistics -->
         @endsection
-        <div class="w-full bg-white">
-            <div class="w-10/12 md:w-9/12 mx-auto py-6 text-3xl text-justify tracking-wide leading-relaxed">
-                <p>The unavoidable use of real property is the reason why everyone must acquire real property. Real estate is a necessity in all domains of life. With this knowledge, we then come in to present a "more than a neccessity real property" as a support to your endeavors. </p>
-                <p>Knowing that security is at the core of every business, we then come assuring you security and working towards a modern society where ever we are.</p>
+        <div class="w-full py-6 bg-white">
+            <div class=" w-10/12 md:w-9/12 mx-auto py-6 text-3xl text-justify tracking-wide leading-relaxed animate__animated animate__lightSpeedInLeft">
+                <p data-aos="fade-left" data-aos-easing="linear" data-aos-duration="2000">The unavoidable use of real property is the reason why everyone must acquire real property. Real estate is a necessity in all domains of life. With this knowledge, we then come in to present a "more than a neccessity real property" as a support to your endeavors. </p>
+                <p data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2000">Knowing that security is at the core of every business, we then come assuring you security and working towards a modern society where ever we are.</p>
             </div>
             <div class="py-24 bg-black flex flex-wrap align-middle items-center justify-center">
-                <div class="h-full align-baseline text-white w-10/12 md:w-4/12">
+                <div data-aos="zoom-in-right" data-aos-duration="2000" class="h-full align-baseline text-white w-10/12 md:w-4/12">
                     <div class="text-3xl font-bold text-center capitalize">Retracing the path</div>
                     <div class="text-justify text-2xl py-6 leading-relaxed tracking-wide w-10/12 mx-auto" >Retracing the path to a modern real society. We are taking you there, where property is always available.</div>
                 </div>
-                <video src="{{ url('videos/video1.mp4') }}" controls class="w-10/12 md:w-6/12 mx-auto h-auto bg-white rounded"></video>
+                <video src="{{ url('videos/video1.mp4') }}" controls data-aos="zoom-in-left" data-aos-duration="2000" data-aos-offset="300" class="w-10/12 md:w-6/12 mx-auto h-auto bg-white rounded"></video>
             </div>
-            <div class=" statistics w-6/7 sm:w-4/6 mx-auto py-20 sm:grid grid-cols-3 items-center">
+            <div data-aos="zoom-in" data-aos-duration="1900" data-aos-easing="ease-in-back" class=" statistics w-6/7 sm:w-4/6 mx-auto py-20 sm:grid grid-cols-3 items-center">
                 <div class="shadow-2xl text-center justify-center py-8 h-4/6 w-2/3 rounded-full bg-gray-700 text-white">
                     <div class="w-3/5 mx-auto shadow-inner font-semibold text-center px-auto py-4 rounded-full text-2xl bg-gray-500">24+</div>
                     <div class="text-center w-full px-2 pb-4 mb-5 text-xl font-semibold uppercase bg-gray-800 p-3 rounded-full">projects</div>
@@ -119,12 +126,12 @@
                 </div>
             </div>
             
-            <div class="py-14 w-10/12 md:w-9/12 mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-2">
-                <duv class="sm:col-span-2 md:col-span-3 text-center text-3xl font-bold leading-relaxed tracking-wide text-gray-900 py-6">Our Property</duv>
-                <div class="w-full rounded mx-auto my-4 h-84 md:col-span-2">
-                    <img src="{{ url('img/marketing1.jpg') }}" alt="" class="w-full h-full rounded">
+            <div class=" py-6 w-11/12 md:w-10/12 mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-2 rounded-lg">
+                <duv class="sm:col-span-2 md:col-span-3 text-center text-3xl font-bold leading-relaxed tracking-wide  py-2">Our Property</duv>
+                <div class="w-full rounded mx-auto my-4 px-2 md:col-span-2 animate-pulse">
+                    <img src="{{ url('img/icon_testimonies.svg') }}" alt="" class="w-full h-full rounded" height="60vh" style="min-height: 10rem; max-height:22rem">
                 </div>
-                <div class="flex align-middle items-center h-full w-11/12 mx-auto relative">
+                <div data-aos="flip-left" data-aos-duration="1500" data-aos-offset="200" class="flex align-middle items-center h-full w-11/12 px-2 mx-auto relative">
                     <div class="p-4 text-center text-gray-200 bg-gray-700 shadow-xl rounded-3xl tracking-wide leading-relaxed">
                         <div class="text-3xl text-bold my-3 capitalize">keeping it simple</div>
                         <div class="text-2xl py-4">Very easy-going. Always feel free to book for a visit to have a look at property before payments if that will be necessary on your part.</div>
@@ -144,7 +151,7 @@
             <div class="md:grid grid-cols-2 xl:grid-cols-3 w-11/12 mx-auto py-12 text-center">
                 <div class="md:col-span-2 xl:col-span-3 text-center text-3xl font-bold leading-relaxed tracking-wide capitalize text-gray-200 gap-3">Latest Deals</div>
                 @for ($i = 0; $i < count($latest); $i++)
-                    <a href="{{ url('details/'.$latest[$i]['id']) }}" class="mx-2 my-2 inline-block h-auto max-h-screen p-3 bg-gray-700">
+                    <a data-aos="fade-up" data-aos-anchor-placement="center-bottom" href="{{ url('details/'.$latest[$i]['id']) }}" class="mx-2 my-2 inline-block h-auto max-h-screen p-3 bg-gray-700">
                         <img src="{{ url($latest[$i]['site_map']) }}" alt="" id="prop_image" class="w-full h-96 rounded-md">
                         <div class="text-justify text-xl text-white h-1/3">
                             <b> {{$latest[$i]['name']}} : {{$latest[$i]['site_number']}} </b>(situated at <span> {{$latest[$i]['situated_at']}}) </span>

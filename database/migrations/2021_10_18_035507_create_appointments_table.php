@@ -16,18 +16,19 @@ class CreateAppointmentsTable extends Migration
         Schema::create('appointments', function (Blueprint $table) {
             $table->engine = "InnoDB";
             $table->id();
-            $table->date('set_date');//set date for appointment
             $table->time('set_time');//scheduled time for appointment
             $table->float('fee')->default(20.0);
             $table->integer('status')->default(1);//pending-1, achieved-0
-            $table->string('email');
+            $table->string('email')->nullable();
+            $table->string('contact');
             $table->string('client_name');
+            $table->unsignedBigInteger('site_id')->nullable();
             $table->timestamps();
         });
 
-        Schema::table('appointments', function (Blueprint $table) {
-            $table->foreignId('site_id')->references('id')->on('sites')->onUpdate('cascade');
-        });
+        // Schema::table('appointments', function (Blueprint $table) {
+        //     $table->foreignId('site_id')->references('id')->on('sites')->onUpdate('cascade');
+        // });
     }
 
     /**

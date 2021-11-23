@@ -1,3 +1,8 @@
 /* #header-container #nav_toggler{
     transform: rotate3d(21, 10, 30);
 } */
+@import 'animate.css';
+:root {
+    --animate-duration: 1.2s;
+    --animate-delay: 0.6s;
+  }

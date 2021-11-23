@@ -29,13 +29,13 @@
                     <div class="col-span-5 md:col-span-2 flex align-middle items-center justify-center">
                         <div class="shadow m-3 py-6 px-2"> 
                             <div class="justify-center">
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>name</strong> : {{ $site['name'] }}</span>
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Site number</strong> : {{ $site['site_number'] }}</span>
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Created on</strong> : {{ $site['created_at'] }}</span>
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Last updated on</strong> : {{ $site['updated_at'] }}</span>
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong> Contains </strong> : {{ $site['asset_count'] }} assets</span>
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3"><strong> Coordinates </strong> : {{ $site['latitude'] }} / {{ $site['longitude'] }} </span>
-                                <span class="block border-b-2 border-gray-100 text-lg mx-3 text-justify py-2"> <strong> Located at: </strong> <strong> {{ $site['location_name'] }} </strong>; {{ $site['description'] }}</span>
+                                @if(isset($site['name']))<span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>name</strong> : {{ $site['name'] }} </span>@endif
+                                @if(isset($site['site_number']))<span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Site number</strong> : {{ $site['site_number'] }}</span>@endif
+                                @if(isset($site['created_at']))<span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Created on</strong> : {{ $site['created_at'] }}</span>@endif
+                                @if(isset($site['updated_at']))<span class="block border-b-2 border-gray-100 text-lg mx-3"><strong>Last updated on</strong> : {{ $site['updated_at'] }}</span>@endif
+                                @if(isset($site['asset_count']))<span class="block border-b-2 border-gray-100 text-lg mx-3"><strong> Contains </strong> : {{ $site['asset_count'] }} assets</span>@endif
+                                @if(isset($site['coords']))<span class="block border-b-2 border-gray-100 text-lg mx-3"><strong> Coordinates </strong> : {{ $site['coords'] }} </span>@endif
+                                @if(isset($site['location_name']))<span class="block border-b-2 border-gray-100 text-lg mx-3 text-justify py-2"> <strong> Located at: </strong> <strong> {{ $site['location_name'] }} </strong>; {{ $site['description'] }}</span>@endif
                             </div>
                             
                             <div class="flex w-full justify-center py-3 px-5">

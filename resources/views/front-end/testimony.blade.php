@@ -24,16 +24,16 @@
 
     @include('front-end.template.header')
 
-    <div class="w-full text-center text-4xl leading-relaxed font-bold capitalize py-20 text-white">Our customer feedback</div>
+    <div class="w-full text-center text-4xl leading-relaxed font-bold capitalize mt-16 py-20 text-white animate-pulse">Our customer feedback</div>
     
     @section('testimonySection')
     @endsection
     <div class=" py-12 bg-white">
         <div class="w-full py-6">
-            <img src="{{ url('img/testimony.jpg') }}" alt="" class="rounded-xl w-11/12 sm:w-9/12 mx-auto img_upper">
+            <img src="{{ url('img/testimony.jpg') }}" alt="" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="100" class="rounded-xl w-11/12 sm:w-9/12 mx-auto img_upper">
         </div>
         <div class="w-full py-4 px-6 justify-center col-span-2 overflow-x-scroll no-scrollbar">
-            <div class="flex flex-nowrap w-max">
+            <div data-aos="fade-up" data-aos-duration="1500", data-aos-offset="170" class="flex flex-nowrap w-max">
                 
                 <div class="my-2 mx-3  w-60 gap-2 bg-gray-800 items-center inline-block rounded-md">
                     <img src=" {{ url('img\user1.jpg') }} " alt="" class=" h-44 w-44 mx-auto rounded-full my-6">

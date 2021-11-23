@@ -22,7 +22,7 @@
     <div class="w-full min-h-screen py-20 bg-blue-200">
         <div class="my-8 w-11/12 sm:w-9/12 h-4/6 mx-auto">
             <div class="w-full col-span-3" style="min-height: 20rem; height: 75vh">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d580.5513309133453!2d9.291069633733013!3d4.15366333153835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d4.1538436!2d9.2912061!5e0!3m2!1sen!2scm!4v1634235717294!5m2!1sen!2scm" class="w-full h-full px-6 rounded" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.337370066483!2d9.289117049723954!3d4.153904596965065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106131e123dd5263%3A0x82272db51c8d2826!2sCT%20Inc%20Group!5e0!3m2!1sen!2scm!4v1637094770220!5m2!1sen!2scm" class="w-full h-full px-6 rounded" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="w-full h-full flex flex-wrap justify-center font-semibold">
                 <div class="my-3 mx-3 w-44 inline-block text-center py-2 px-2"><div class="justify-center w-full mx-4"><img class="w-16 h-16 rounded-full mx-auto my-3" src="{{ url('img/location_icon.png') }}" alt=""></div><span class="text-blue-700 mx-4 block w-full text-center">UB Juction, Molyko, Buea</span></div>

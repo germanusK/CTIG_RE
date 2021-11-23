@@ -58,7 +58,7 @@ class SiteController extends Controller
                     'Content-type'=>'multipart/form-data',
                     'name'=>'site_map',
                     'contents'=>fopen($request->file('site_map'), 'r'),
-                    'filename'=>time().(string)(rand(10000000000, 99999999999)).'.'.$request->file('site_map')->getClientOriginalExtension()
+                    // 'filename'=>(string)time().(string)(rand(10000000000, 99999999999)).'.'.$request->file('site_map')->getClientOriginalExtension()
                 ]
             ]
         ]);
@@ -83,7 +83,8 @@ class SiteController extends Controller
     public function edit(Request $request, $id)
     {
         //
-        $site = Http::get(Config::get('global_vars.api_dashboard_routes.sites').'/'.$id);
+        $site = Http::get(Config::get('global_vars.api_dashboard_routes.sites').'/'.$id)->json();
+        $site['site_map'] ? $site['site_map'] = (string)(Config::get('global_vars.api_dashboard_routes.maps')).'/'.$site['site_map']: null;
         return view('dashboard.site.edit', ['site'=>$site]);
     }
 

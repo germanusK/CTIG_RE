@@ -1,37 +1,38 @@
 <?php
 
-
+    $api_base_path = 'http://localhost:8001/api';
     return [
          'api_dashboard_routes' => [
 
-            'assets_count'=>'http://localhost:8001/api/dashboard/assets/count',
-            'sites_count'=>'http://localhost:8001/api/dashboard/sites/count',
-            'categories_count'=>'http://localhost:8001/api/dashboard/categories/count',
-            'pending_visits_count'=>'http://localhost:8001/api/dashboard/visits/pending/count',
-            'users_count'=>'http://localhost:8001/api/dashboard/users',
+            'assets_count'=>$api_base_path.'/___admin/assets/count',
+            'sites_count'=>$api_base_path.'/___admin/sites/count',
+            'categories_count'=>$api_base_path.'/___admin/categories/count',
+            'pending_visits_count'=>$api_base_path.'/___admin/visits/pending/count',
+            'users_count'=>$api_base_path.'/___admin/users',
 
-            'base_route'=>'http://localhost:8001/api/dashboard',
+            'base_route'=>$api_base_path.'/___admin',
             
-            'maps' => 'http://localhost:8001/api/dashboard/maps',
-            'assets'=>'http://localhost:8001/api/dashboard/assets/',
-            'create_asset'=>'http://localhost:8001/api/dashboard/assets/one',
-            'trending_assets'=>'http://localhost:8001/api/dashboard/assets/trending',
-            'asset_details'=>'http://localhost:8001/api/dashboard/assets/details',
+            'maps' => $api_base_path.'/___admin/maps',
+            'assets'=>$api_base_path.'/___admin/assets/',
+            'create_asset'=>$api_base_path.'/___admin/assets/one',
+            'trending_assets'=>$api_base_path.'/___admin/assets/trending',
+            'asset_details'=>$api_base_path.'/___admin/assets/details',
 
-            'sites'=>'http://localhost:8001/api/dashboard/sites',
-            'create_site'=>'http://localhost:8001/api/dashboard/sites/one',
-            'trending_sites'=>'http://localhost:8001/api/dashboard/sites/trending',
-            'shuffle_sites'=>'http://localhost:8001/api/dashboard/sites/shuffle',
-            'detailed_sites'=>'http://localhost:8001/api/dashboard/sites/details',
+            'sites'=>$api_base_path.'/___admin/sites',
+            'create_site'=>$api_base_path.'/___admin/sites/one',
+            'trending_sites'=>$api_base_path.'/___admin/sites/trending',
+            'shuffle_sites'=>$api_base_path.'/___admin/sites/shuffle',
+            'detailed_sites'=>$api_base_path.'/___admin/sites/details',
 
 
-            'pending_visits'=>'http://localhost:8001/api/dashboard/visits/pending',
+            'pending_visits'=>$api_base_path.'/___admin/visits/pending',
 
          ],
          'api_frontend_routes'=>[
-             'sites'=>'http://localhost:8001/api/frontend/sites',
-             'shuffle_sites'=>'http://localhost:8001/api/frontend/sites/shuffle',
-             'latest_sites'=>'http://localhost:8001/api/frontend/sites/latest'
+             'sites'=>$api_base_path.'/frontend/sites',
+             'shuffle_sites'=>$api_base_path.'/frontend/sites/shuffle',
+             'latest_sites'=>$api_base_path.'/frontend/sites/latest',
+             'create_appointment'=>$api_base_path.'/frontend/appointment'
          ],
     ];
 

@@ -39,6 +39,10 @@ class SiteDetails extends Controller
     public function show_map(Request $request)
     {
         # code...
-        return view('dashboard.site.map.site_map');
+        $data = Http::get((string)(Config::get('global_vars.api_frontend_routes.sites').'/'.$request->id))->json();
+        if($data['site_map']){
+            $data['site_map'] = (string)(Config::get('global_vars.api_dashboard_routes.maps')).'/'.$data['site_map'];
+        }
+        return view('dashboard.site.map.site_map', ['data'=>$data]);
     }
 }
