@@ -9,7 +9,7 @@ class Appointments extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['set_date', 'set_time', 'fee', 'email', 'client_name', 'site_id'];
+    protected $fillable = ['set_time', 'fee', 'email', 'contact', 'client_name', 'site_id'];
 
     public function site(){
         $this->belongsTo(Sites::class ,'site_id');

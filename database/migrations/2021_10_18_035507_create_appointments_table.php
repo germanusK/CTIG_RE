@@ -19,7 +19,8 @@ class CreateAppointmentsTable extends Migration
             $table->timestamp('set_time');//scheduled time for appointment
             $table->float('fee')->default(20.0);
             $table->integer('status')->default(1);//pending-1, achieved-0
-            $table->string('email');
+            $table->string('email')->nullable();
+            $table->string('contact');
             $table->string('client_name');
             $table->timestamps();
             $table->unsignedBigInteger('site_id')->nullable();

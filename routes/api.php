@@ -116,7 +116,7 @@ Route::group(['prefix'=>'dashboard'], function(){
 
     Route::get('/appointments/{id}', [AppointmentsController::class, 'readOne']);
     Route::get('/appointments', [AppointmentsController::class, 'readMany']);
-    Route::post('appointments/{id}', [AppointmentsController::class, 'writeOne']);
+    Route::post('appointments/create', [AppointmentsController::class, 'writeOne']);
     Route::post('/appointments', [AppointmentsController::class, 'writeMany']);
     Route::put('/appointments/{id}', [AppointmentsController::class, 'putOne']);
     Route::put('/appointments', [AppointmentsController::class, 'putMany']);
@@ -224,7 +224,7 @@ Route::group(['prefix'=>'frontend'], function(){
     Route::get('/appointments', [AppointmentsController::class, 'readMany']);
     Route::get('/appointments/{id}', [AppointmentsController::class, 'readOne']);
     Route::post('/appointments', [AppointmentsController::class, 'writeMany']);
-    Route::post('appointments/{id}', [AppointmentsController::class, 'writeOne']);
+    Route::post('/appointment', [AppointmentsController::class, 'writeOne']);
     
 
     Route::get('/locations', [LocationsController::class, 'readMany']);

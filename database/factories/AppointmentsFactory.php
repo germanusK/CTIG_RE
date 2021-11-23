@@ -28,6 +28,7 @@ class AppointmentsFactory extends Factory
             'fee'=>$this->faker->numberBetween(10, 30),
             'status'=>$this->faker->numberBetween(0, 1),
             'email'=>$this->faker->email(),
+            'contact'=>$this->faker->phoneNumber(),
             'client_name'=>$this->faker->name(),
             // 'site_id'=>Sites::factory(1)->create()->first()
         ];
